@@ -1,3 +1,7 @@
-export function HomePage() {
+import {Header} from "../components/Header";
 
+export function HomePage() {
+    return <>
+        <Header/>
+    </>
 }
