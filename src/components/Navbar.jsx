@@ -27,9 +27,6 @@ export function Navbar() {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
-                        <div>Logo</div>
-                    </Link>
                     <div style={{flexGrow: 1}}></div>
                     {/* Add this line to push menu items to the right */}
                     <div className="desktop-menu" style={{display: {xs: 'none', md: 'flex'}}}>
