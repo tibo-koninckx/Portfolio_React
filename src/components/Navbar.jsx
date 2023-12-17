@@ -33,6 +33,9 @@ export function Navbar() {
                         <Link to="/" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
                             Home
                         </Link>
+                        <Link to="/about" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
+                            About
+                        </Link>
                     </div>
                 </Toolbar>
             </AppBar>
@@ -42,6 +45,9 @@ export function Navbar() {
                     <ListItem onClick={handleDrawerClose}>
                         <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
                             Home
+                        </Link>
+                        <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>
+                            About
                         </Link>
                     </ListItem>
                 </List>
