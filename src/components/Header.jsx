@@ -2,8 +2,8 @@ import {Container, Grid, Typography} from "@mui/material";
 
 export function Header() {
     return <>
-        <Grid container spacing={2}>
-            <Grid item xs={12} sm={10} md={8} lg={8}>
+        <Grid sx={{ maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
+            <Grid item xs={12} sm={12} md={8} lg={8}>
                 <Container maxWidth="md">
                     <Typography variant="h1" sx={{fontFamily: 'Nunito, sans-serif', marginTop: '5%', mx: 2}}>Tibo Koninckx</Typography>
                     <Typography  variant="h4" sx={{fontFamily: 'Nunito, sans-serif', marginTop: '15%', mx: 2}}>I'AM A WEB DEVELOPER, I TRANSFORM YOUR
