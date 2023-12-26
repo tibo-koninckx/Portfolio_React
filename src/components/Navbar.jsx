@@ -16,7 +16,7 @@ export function Navbar() {
     return <>
 
         <div>
-            <AppBar position="static">
+            <AppBar position="sticky">
                 <Toolbar>
                     <IconButton
                         edge="start"
