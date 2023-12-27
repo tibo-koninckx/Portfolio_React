@@ -3,7 +3,8 @@ import './App.css';
 import {HomePage} from "./pages/HomePage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Navbar} from "./components/Navbar";
-import {About} from "./components/About";
+import {Frameworks, FullStack, Tools} from "./data/data";
+import {AboutPage} from "./pages/AboutPage";
 
 
 function App() {
@@ -18,7 +19,7 @@ function ProvidedApp() {
             <Navbar/>
             <Routes>
                 <Route index path={"/"} element={<HomePage/>}/>
-                <Route path={"/about"} element={<About/>}/>
+                <Route path={"/about"} element={<AboutPage FullStack={FullStack} Frameworks={Frameworks} Tools={Tools}/>}/>
             </Routes>
         </BrowserRouter>
     </>
