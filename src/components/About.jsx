@@ -1,7 +1,7 @@
 import {Grid, Typography} from "@mui/material";
 
 export function About(props) {
-    const {FullStack, Frameworks, Tools} = props;
+    const {FullStack, Frameworks, Tools, Bio} = props;
     return (
         <>
             <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
@@ -20,10 +20,7 @@ export function About(props) {
 
                     <Typography variant="body1"
                                 sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
-                        My name is Tibo Koninckx, I live in Mortsel. I completed a degree in programming at Thomas More
-                        University of Applied Sciences in Sint Katelijne Waver (De Nayer campus). I became interested in
-                        Web development when a secondary school teacher explained how to create a website with HTML and
-                        CSS. That's how I became interested in web development.
+                        {Bio.map(b => b)}
                     </Typography>
 
                     <Typography variant="h2" sx={{
