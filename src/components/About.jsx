@@ -1,13 +1,13 @@
-import { Grid, Typography } from "@mui/material";
+import {Grid, Typography} from "@mui/material";
 
 export function About() {
     return (
         <>
-            <Grid container sx={{ maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+            <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Typography variant="h2" sx={{
                         fontFamily: 'Nunito, sans-serif',
-                        marginTop: { xs: '8%', sm: '3%', lg: '3%' },
+                        marginTop: {xs: '8%', sm: '3%', lg: '3%'},
                         textAlign: 'center'
                     }}>About me</Typography>
 
@@ -17,8 +17,12 @@ export function About() {
                         textAlign: 'center'
                     }}>Biography</Typography>
 
-                    <Typography variant="body1" sx={{ fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%' }}>
-                        My name is Tibo Koninckx, I live in Mortsel. I completed a degree in programming at Thomas More University of Applied Sciences in Sint Katelijne Waver (De Nayer campus). I became interested in Web development when a secondary school teacher explained how to create a website with HTML and CSS. That's how I became interested in web development.
+                    <Typography variant="body1"
+                                sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
+                        My name is Tibo Koninckx, I live in Mortsel. I completed a degree in programming at Thomas More
+                        University of Applied Sciences in Sint Katelijne Waver (De Nayer campus). I became interested in
+                        Web development when a secondary school teacher explained how to create a website with HTML and
+                        CSS. That's how I became interested in web development.
                     </Typography>
 
                     <Typography variant="h2" sx={{
@@ -27,12 +31,13 @@ export function About() {
                         textAlign: 'center'
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
-                        <Grid item xs={12} sm={12} md={3} lg={3} sx={{ textAlign: 'center' }}>
-                            <Typography variant="body1" className="no-first-letter" sx={{ fontFamily: 'Nunito, sans-serif' }}>
+                        <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                            <Typography variant="body1" className="no-first-letter"
+                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
                                     textAlign: 'center'
-                                }}>Languages</Typography>
+                                }}>Full stack web development</Typography>
                                 <ul>
                                     <li>HTML</li>
                                     <li>CSS</li>
@@ -47,7 +52,7 @@ export function About() {
                         </Grid>
                         <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
                             <Typography variant="body1" className="no-first-letter"
-                                        sx={{fontFamily: 'Nunito, sans-serif' }}>
+                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
                                     textAlign: 'center'
@@ -60,7 +65,7 @@ export function About() {
                         </Grid>
                         <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
                             <Typography variant="body1" className="no-first-letter"
-                                        sx={{fontFamily: 'Nunito, sans-serif' }}>
+                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
                                     textAlign: 'center'
@@ -74,6 +79,16 @@ export function About() {
                             </Typography>
                         </Grid>
                     </Grid>
+                    <Typography variant="h2" sx={{
+                        fontFamily: 'Nunito, sans-serif',
+                        marginTop: '2%',
+                        textAlign: 'center'
+                    }}>Personal interests</Typography>
+                    <Typography variant="body1"
+                                sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>Every
+                        Saturday morning I am an assistant at <a href="https://www.codefever.be/nl" target="_blank" style={{color: "white"}}>Codefever</a>. Codefever is an organization that teaches
+                        children to program. As an assistant I have to assist the teacher and help children who have
+                        problems.</Typography>
                 </Grid>
             </Grid>
         </>
