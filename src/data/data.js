@@ -3,8 +3,7 @@ export const FullStack = [
     {name: "CSS"},
     {name: "Javascript & React"},
     {name: "Java spring Boot"},
-    {name: "Databanken: SQL (Postgres, Mysql)\n" +
-            "Nosql (MongoDb, Firbase)"},
+    {name: "Databanken: SQL (Postgres, Mysql) Nosql (MongoDb, Firbase)"},
     {name: "git, gitHub"},
     {name: "HTML"},
     {name: "Test Driven"},
