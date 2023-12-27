@@ -27,3 +27,9 @@ export const Biogrphy = [
     "Applied Sciences in Sint Katelijne Waver (De Nayer campus). I became interested in Web development when a secondary school teacher " +
     "explained how to create a website with HTML and CSS. That's how I became interested in web development."
 ]
+
+export const Interests = [
+    "Every Saturday morning I am an assistant at ",
+    <a href="https://www.codefever.be/nl" target="_blank" style={{ color: "white" }}>Codefever</a>,
+    ". Codefever is an organization that teaches children to program. As an assistant I have to assist the teacher and help children who have problems."
+]
