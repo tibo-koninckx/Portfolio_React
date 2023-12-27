@@ -1,6 +1,7 @@
 import {Grid, Typography} from "@mui/material";
 
-export function About() {
+export function About(props) {
+    const {FullStack, Frameworks, Tools} = props;
     return (
         <>
             <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
@@ -31,53 +32,54 @@ export function About() {
                         textAlign: 'center'
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
-                        <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
-                            <Typography variant="body1" className="no-first-letter"
-                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
-                                <Typography variant="h4" sx={{
-                                    fontFamily: 'Nunito, sans-serif',
-                                    textAlign: 'center'
-                                }}>Full stack web development</Typography>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>Javascript & React</li>
-                                    <li>Java spring Boot</li>
-                                    <li>Databanken: SQL (Postgres, Mysql) <br/> Nosql (MongoDb, Firbase)</li>
-                                    <li>git, gitHub</li>
-                                    <li>Test Driven</li>
-                                    <li>Unit Testing</li>
-                                </ul>
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
-                            <Typography variant="body1" className="no-first-letter"
-                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
-                                <Typography variant="h4" sx={{
-                                    fontFamily: 'Nunito, sans-serif',
-                                    textAlign: 'center'
-                                }}>Frameworks</Typography>
-                                <ul>
-                                    <li>Material UI</li>
-                                    <li>Ant Design</li>
-                                </ul>
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
-                            <Typography variant="body1" className="no-first-letter"
-                                        sx={{fontFamily: 'Nunito, sans-serif'}}>
-                                <Typography variant="h4" sx={{
-                                    fontFamily: 'Nunito, sans-serif',
-                                    textAlign: 'center'
-                                }}>Tools</Typography>
-                                <ul>
-                                    <li>Intelij</li>
-                                    <li>Visual studio</li>
-                                    <li>Visual studio code</li>
-                                    <li>Office</li>
-                                </ul>
-                            </Typography>
-                        </Grid>
+                        {FullStack.length > 0 &&(
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                                <Typography variant="body1" className="no-first-letter"
+                                            sx={{fontFamily: 'Nunito, sans-serif'}}>
+                                    <Typography variant="h4" sx={{
+                                        fontFamily: 'Nunito, sans-serif',
+                                        textAlign: 'center'
+                                    }}>{!FullStack.length > 0 ? '' : 'Full stack web development'}</Typography>
+                                    <ul>
+                                        {FullStack.map((f, index) => (
+                                            <li key={index}>{f.name}</li>
+                                        ))}
+                                    </ul>
+                                </Typography>
+                            </Grid>
+                        )}
+                        {Frameworks.length > 0 && (
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                                <Typography variant="body1" className="no-first-letter"
+                                            sx={{fontFamily: 'Nunito, sans-serif'}}>
+                                    <Typography variant="h4" sx={{
+                                        fontFamily: 'Nunito, sans-serif',
+                                        textAlign: 'center'
+                                    }}>Frameworks</Typography>
+                                    <ul>
+                                        {Frameworks.map((f, index) => (
+                                            <li key={index}>{f.name}</li>
+                                        ))}
+                                    </ul>
+                                </Typography>
+                            </Grid>
+                        )}
+                        {Tools.length > 0 && (
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                                <Typography variant="body1" className="no-first-letter"
+                                            sx={{fontFamily: 'Nunito, sans-serif'}}>
+                                    <Typography variant="h4" sx={{
+                                        fontFamily: 'Nunito, sans-serif',
+                                        textAlign: 'center'
+                                    }}>{!Tools.length > 0 ? '' : 'Tools'}</Typography>
+                                    <ul>
+                                        {Tools.map((t, index) => (
+                                            <li key={index}>{t.name}</li>
+                                        ))}
+                                    </ul>
+                                </Typography>
+                            </Grid>
+                        )}
                     </Grid>
                     <Typography variant="h2" sx={{
                         fontFamily: 'Nunito, sans-serif',
@@ -86,7 +88,9 @@ export function About() {
                     }}>Personal interests</Typography>
                     <Typography variant="body1"
                                 sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>Every
-                        Saturday morning I am an assistant at <a href="https://www.codefever.be/nl" target="_blank" style={{color: "white"}}>Codefever</a>. Codefever is an organization that teaches
+                        Saturday morning I am an assistant at <a href="https://www.codefever.be/nl" target="_blank"
+                                                                 style={{color: "white"}}>Codefever</a>. Codefever is an
+                        organization that teaches
                         children to program. As an assistant I have to assist the teacher and help children who have
                         problems.</Typography>
                 </Grid>
