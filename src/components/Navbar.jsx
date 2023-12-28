@@ -39,6 +39,9 @@ export function Navbar() {
                         <Link to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link" target="_blank" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
                             cv
                         </Link>
+                        <Link to="/contact" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
+                            Contact
+                        </Link>
                     </div>
                 </Toolbar>
             </AppBar>
@@ -54,6 +57,9 @@ export function Navbar() {
                         </Link>
                         <Link to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link" target="_blank" style={{textDecoration: 'none', color: 'inherit'}}>
                             cv
+                        </Link>
+                        <Link to="/contact" style={{textDecoration: 'none', color: 'inherit'}}>
+                            Contact
                         </Link>
                     </ListItem>
                 </List>
