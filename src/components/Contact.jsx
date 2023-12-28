@@ -1,4 +1,4 @@
-import {Box, Grid, TextField, Typography} from "@mui/material";
+import {Box, Divider, Grid, TextField, Typography} from "@mui/material";
 
 export function Contact() {
     return <>
@@ -7,6 +7,10 @@ export function Contact() {
             height: '100vh',
             '& .MuiTextField-root': { m: 1, width: '50ch', }
         }}>
+            <Box sx={{color: 'black'}}>
+                <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt:2}}>Contact Me</Typography>
+                <Divider>Let's connect</Divider>
+            </Box>
             <Box className="contact">
                 <Grid>
                     <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt:5}}>
