@@ -53,10 +53,10 @@ export function Contact() {
                     </Grid>
                 </Grid>
             </Box>
-            <Box className="contact">
+            <Box className="contact" sx={{mt:2}}>
                 <Grid>
-                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary" fontSize="large"/></Link>
-
+                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary" fontSize="large" sx={{mr:2}}/></Link>
+                    <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success" fontSize="large"/></Link>
                 </Grid>
             </Box>
         </Box>
