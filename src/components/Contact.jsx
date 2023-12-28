@@ -1,17 +1,49 @@
-import {Box, Button, Divider, Grid, Link, TextField, Typography} from "@mui/material";
+import {Alert, Box, Button, Divider, Grid, Link, TextField, Typography} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
+import * as emailjs from "@emailjs/browser";
 
 export function Contact() {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
-        Email: "",
+        email: "",
         message: "",
     });
+
+    function handleInputChange(e) {
+        const {name, value} = e.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    }
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        console.log("Form Data:", formData);
+
+        emailjs.send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            formData,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        )
+            .then(
+                (result) => {
+                    <Alert severity="success">Email succesfully send</Alert>
+                },
+                (error) => {
+                    <Alert severity="error">Sending mail failed, please try again later!</Alert>
+                }
+            );
+
+        e.target.reset();
+    }
     return <>
-        <Box component="form" method="post" autoComplete="off" sx={{
+        <Box component="form" onSubmit={sendEmail} autoComplete="off" sx={{
             background: 'white',
             height: '100vh',
             '& .MuiTextField-root': {m: 1, width: '50ch'}
@@ -29,6 +61,8 @@ export function Contact() {
                                    label="FirstName"
                                    variant="outlined"
                                    margin="normal"
+                                   name="firstName"
+                                   onChange={handleInputChange}
                                    required
                         />
 
@@ -37,6 +71,8 @@ export function Contact() {
                             label="LastName"
                             variant="outlined"
                             margin="normal"
+                            name="lastName"
+                            onChange={handleInputChange}
                             required
                         />
                     </Grid>
@@ -46,6 +82,8 @@ export function Contact() {
                             label="email"
                             variant="outlined"
                             margin="normal"
+                            name="email"
+                            onChange={handleInputChange}
                             required
                         />
                     </Grid>
@@ -55,12 +93,14 @@ export function Contact() {
                             label="Message"
                             variant="outlined"
                             margin="normal"
+                            name="message"
+                            onChange={handleInputChange}
                             multiline
                             rows={4}
                         />
                         <Box>
                             <Grid>
-                                <Button variant="contained" sx={{mx: 1}}>Send</Button>
+                                <Button type="submit" variant="contained" sx={{mx: 1}}>Send</Button>
                             </Grid>
                         </Box>
                     </Grid>
