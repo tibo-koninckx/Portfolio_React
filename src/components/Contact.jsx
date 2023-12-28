@@ -1,5 +1,6 @@
 import {Box, Divider, Grid, TextField, Typography, Link} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export function Contact() {
     return <>
