@@ -13,6 +13,7 @@ export function Contact() {
     });
 
     const [alert, setAlert] = useState(null);
+    const [close, setClose] = useState(false);
 
     function handleInputChange(e) {
         const {name, value} = e.target;
@@ -35,11 +36,11 @@ export function Contact() {
         )
             .then(
                 (result) => {
-                    setAlert(<Alert severity="success">Email succesfully send</Alert>);
+                    setAlert(<Alert onClose={() => setClose(true)} severity="success">Email succesfully send</Alert>);
 
                     },
                 (error) => {
-                    setAlert(<Alert severity="error">Sending mail failed, please try again later!</Alert>);
+                    setAlert(<Alert onClose={() => setClose(true)} severity="error">Sending mail failed, please try again later!</Alert>);
                 }
             );
 
@@ -56,7 +57,7 @@ export function Contact() {
                     Me</Typography>
                 <Divider>Let's connect</Divider>
             </Box>
-            <Box>{alert}</Box>
+            <Box>{!close && alert}</Box>
             <Box className="contact">
                 <Grid>
                     <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt: 5}}>
