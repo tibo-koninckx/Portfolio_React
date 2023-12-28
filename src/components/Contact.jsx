@@ -26,6 +26,25 @@ export function Contact() {
                                required
                     />
                 </Grid>
+                <Grid item xs={12} sm={6} md={6} lg={6}>
+                    <TextField
+                        id="email"
+                        label="email"
+                        variant="outlined"
+                        margin="normal"
+                        required
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={6} lg={6}>
+                    <TextField
+                        id="message"
+                        label="Message"
+                        variant="outlined"
+                        margin="normal"
+                        multiline
+                        rows={4}
+                    />
+                </Grid>
             </Grid>
         </Box>
     </>
