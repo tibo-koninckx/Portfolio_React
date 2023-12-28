@@ -1,8 +1,15 @@
 import {Box, Button, Divider, Grid, Link, TextField, Typography} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import {useState} from "react";
 
 export function Contact() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        Email: "",
+        message: "",
+    });
     return <>
         <Box component="form" method="post" autoComplete="off" sx={{
             background: 'white',
