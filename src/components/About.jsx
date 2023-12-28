@@ -42,7 +42,7 @@ export function About(props) {
                                     <Typography variant="h4" sx={{
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
-                                    }}>{!FullStack.length > 0 ? '' : 'Full stack web development'}</Typography>
+                                    }}>Full stack web development</Typography>
                                     <ul>
                                         {FullStack.map((f, index) => (
                                             <li key={index}>{f.name}</li>
@@ -74,7 +74,7 @@ export function About(props) {
                                     <Typography variant="h4" sx={{
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
-                                    }}>{!Tools.length > 0 ? '' : 'Tools'}</Typography>
+                                    }}>Tools</Typography>
                                     <ul>
                                         {Tools.map((t, index) => (
                                             <li key={index}>{t.name}</li>
@@ -102,6 +102,5 @@ export function About(props) {
                 </Grid>
             </Grid>
         </>
-    )
-        ;
+    );
 }
