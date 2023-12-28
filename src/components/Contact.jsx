@@ -7,9 +7,9 @@ export function Contact() {
             height: '100vh',
             '& .MuiTextField-root': { m: 1, width: '50ch', }
         }}>
-            <div className="contact ">
+            <Box className="contact">
                 <Grid>
-                    <Grid item xs={12} sm={6} md={8} lg={12}>
+                    <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt:5}}>
                         <TextField sx={{mr: 2}}
                                    id="FirstName"
                                    label="FirstName"
@@ -46,7 +46,7 @@ export function Contact() {
                         />
                     </Grid>
                 </Grid>
-            </div>
+            </Box>
         </Box>
     </>
 }
