@@ -1,4 +1,5 @@
-import {Box, Divider, Grid, TextField, Typography} from "@mui/material";
+import {Box, Divider, Grid, TextField, Typography, Link} from "@mui/material";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export function Contact() {
     return <>
@@ -49,6 +50,12 @@ export function Contact() {
                             rows={4}
                         />
                     </Grid>
+                </Grid>
+            </Box>
+            <Box className="contact">
+                <Grid>
+                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary" fontSize="large"/></Link>
+
                 </Grid>
             </Box>
         </Box>
