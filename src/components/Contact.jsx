@@ -54,7 +54,7 @@ export function Contact() {
                 </Grid>
             </Box>
             <Box className="contact" sx={{mt:2}}>
-                <Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary" fontSize="large" sx={{mr:2}}/></Link>
                     <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success" fontSize="large"/></Link>
                 </Grid>
