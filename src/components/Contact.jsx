@@ -1,4 +1,4 @@
-import {Box, Divider, Grid, TextField, Typography, Link} from "@mui/material";
+import {Box, Button, Divider, Grid, Link, TextField, Typography} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -7,15 +7,16 @@ export function Contact() {
         <Box component="form" autoComplete="off" sx={{
             background: 'white',
             height: '100vh',
-            '& .MuiTextField-root': { m: 1, width: '50ch'}
+            '& .MuiTextField-root': {m: 1, width: '50ch'}
         }}>
             <Box sx={{color: 'black'}}>
-                <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt:2}}>Contact Me</Typography>
+                <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
+                    Me</Typography>
                 <Divider>Let's connect</Divider>
             </Box>
             <Box className="contact">
                 <Grid>
-                    <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt:5}}>
+                    <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt: 5}}>
                         <TextField sx={{mr: 2}}
                                    id="FirstName"
                                    label="FirstName"
@@ -50,13 +51,21 @@ export function Contact() {
                             multiline
                             rows={4}
                         />
+                        <Box>
+                            <Grid>
+                                <Button variant="contained" sx={{mx: 1}}>Send</Button>
+                            </Grid>
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>
-            <Box className="contact" sx={{mt:2}}>
+            <Box className="contact" sx={{mt: 2}}>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary" fontSize="large" sx={{mr:2}}/></Link>
-                    <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success" fontSize="large"/></Link>
+                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary"
+                                                                                                        fontSize="large"
+                                                                                                        sx={{mr: 2}}/></Link>
+                    <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
+                                                                                              fontSize="large"/></Link>
                 </Grid>
             </Box>
         </Box>
