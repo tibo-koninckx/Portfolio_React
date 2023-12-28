@@ -7,7 +7,7 @@ export function Contact() {
         <Box component="form" autoComplete="off" sx={{
             background: 'white',
             height: '100vh',
-            '& .MuiTextField-root': { m: 1, width: '50ch', }
+            '& .MuiTextField-root': { m: 1, width: '50ch'}
         }}>
             <Box sx={{color: 'black'}}>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt:2}}>Contact Me</Typography>
