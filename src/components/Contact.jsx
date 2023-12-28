@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 export function Contact() {
     return <>
-        <Box component="form" autoComplete="off" sx={{
+        <Box component="form" method="post" autoComplete="off" sx={{
             background: 'white',
             height: '100vh',
             '& .MuiTextField-root': {m: 1, width: '50ch'}
