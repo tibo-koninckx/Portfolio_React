@@ -23,13 +23,13 @@ export function Navbar() {
                         color="inherit"
                         aria-label="menu"
                         onClick={handleDrawerOpen}
-                        sx={{mr: 2, display: {xs: 'block', md: 'none'}}}
+                        sx={{mr: 2, display: {xs: 'block', md: 'block'}}}
                     >
                         <MenuIcon/>
                     </IconButton>
                     <div style={{flexGrow: 1}}></div>
                     {/* Add this line to push menu items to the right */}
-                    <div className="desktop-menu" style={{display: {xs: 'none', md: 'flex'}}}>
+                    {/*                    <div className="desktop-menu" style={{display: {xs: 'none', md: 'flex'}}}>
                         <Link to="/" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
                             Home
                         </Link>
@@ -42,23 +42,39 @@ export function Navbar() {
                         <Link to="/contact" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
                             Contact
                         </Link>
-                    </div>
+                    </div>*/}
                 </Toolbar>
             </AppBar>
 
             <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
                 <List>
                     <ListItem onClick={handleDrawerClose}>
-                        <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+                        <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
                             Home
                         </Link>
-                        <Link to="/about" style={{textDecoration: 'none', color: 'inherit'}}>
+                    </ListItem>
+                    <ListItem onClick={handleDrawerClose}>
+                        <Link
+                            to="/about"
+                            style={{textDecoration: "none", color: "inherit"}}
+                        >
                             About
                         </Link>
-                        <Link to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link" target="_blank" style={{textDecoration: 'none', color: 'inherit'}}>
-                            cv
+                    </ListItem>
+                    <ListItem onClick={handleDrawerClose}>
+                        <Link
+                            to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
+                            target="_blank"
+                            style={{textDecoration: "none", color: "inherit"}}
+                        >
+                            CV
                         </Link>
-                        <Link to="/contact" style={{textDecoration: 'none', color: 'inherit'}}>
+                    </ListItem>
+                    <ListItem onClick={handleDrawerClose}>
+                        <Link
+                            to="/contact"
+                            style={{textDecoration: "none", color: "inherit"}}
+                        >
                             Contact
                         </Link>
                     </ListItem>
