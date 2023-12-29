@@ -46,7 +46,10 @@ export function Navbar() {
                 </Toolbar>
             </AppBar>
 
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
+            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}  sx={{
+                display: { xs: 'block' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '10%' },
+            }}>
                 <List>
                     <ListItem onClick={handleDrawerClose}>
                         <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
