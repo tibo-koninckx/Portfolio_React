@@ -50,7 +50,7 @@ export function Contact() {
         <Box component="form" onSubmit={sendEmail} autoComplete="off" sx={{
             background: 'white',
             height: '100vh',
-            '& .MuiTextField-root': {m: 1, width: '50ch'}
+            '& .MuiTextField-root': {m: 1, width: {lg: '50ch', md: '100%', sm: '100%', xs: '100%'}}
         }}>
             <Box sx={{color: 'black'}}>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
@@ -58,7 +58,12 @@ export function Contact() {
                 <Divider>Let's connect</Divider>
             </Box>
             <Box>{!close && alert}</Box>
-            <Box className="contact">
+            <Box sx={{
+                mx:5,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexWrap: 'wrap'}}>
                 <Grid>
                     <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt: 5}}>
                         <TextField sx={{mr: 2}}
@@ -111,7 +116,11 @@ export function Contact() {
                     </Grid>
                 </Grid>
             </Box>
-            <Box className="contact" sx={{mt: 2}}>
+            <Box sx={{mt: 2,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexWrap: 'wrap'}}>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary"
                                                                                                         fontSize="large"
