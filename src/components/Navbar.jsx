@@ -1,7 +1,18 @@
 import {useState} from "react";
-import {AppBar, Drawer, IconButton, List, ListItem, Toolbar} from "@mui/material";
+import {
+    AppBar,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+    Toolbar
+} from "@mui/material";
 import {Link} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 export function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -52,9 +63,16 @@ export function Navbar() {
             }}>
                 <List>
                     <ListItem onClick={handleDrawerClose}>
-                        <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
-                            Home
-                        </Link>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <HomeOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
+                                    Home
+                                </Link>
+                            </ListItemText>
+                        </ListItemButton>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
                         <Link
