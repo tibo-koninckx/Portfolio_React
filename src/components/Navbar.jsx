@@ -93,12 +93,19 @@ export function Navbar() {
                         </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                        <Link
-                            to="/contact"
-                            style={{textDecoration: "none", color: "inherit"}}
-                        >
-                            Contact
-                        </Link>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <ContactPageOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Link
+                                    to="/contact"
+                                    style={{textDecoration: "none", color: "inherit"}}
+                                >
+                                    Contact
+                                </Link>
+                            </ListItemText>
+                        </ListItemButton>
                     </ListItem>
                 </List>
             </Drawer>
