@@ -6,11 +6,14 @@ import {Navbar} from "./components/Navbar";
 import {Biogrphy, Frameworks, FullStack, Interests, Tools} from "./data/data";
 import {AboutPage} from "./pages/AboutPage";
 import {ContactPage} from "./pages/ContactPage";
+import {MessageProvoider} from "./contexts/messageContext";
 
 
 function App() {
     return <>
+        <MessageProvoider>
         <ProvidedApp/>
+        </MessageProvoider>
     </>
 }
 
