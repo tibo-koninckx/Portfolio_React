@@ -60,30 +60,37 @@ export function Navbar() {
                 </Toolbar>
             </AppBar>
 
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}  sx={{
-                display: { xs: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '10%' },
+            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose} sx={{
+                display: {xs: 'block'},
+                '& .MuiDrawer-paper': {boxSizing: 'border-box', width: '10%'},
             }}>
                 <List>
                     <ListItem onClick={handleDrawerClose}>
+                        <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
                         <ListItemButton>
                             <ListItemIcon>
                                 <HomeOutlinedIcon fontSize="small"/>
                             </ListItemIcon>
                             <ListItemText>
-                                <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
                                     Home
+                            </ListItemText>
+                        </ListItemButton>
+                        </Link>
+                    </ListItem>
+                    <ListItem onClick={handleDrawerClose}>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <AccountCircleOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Link
+                                    to="/about"
+                                    style={{textDecoration: "none", color: "inherit"}}
+                                >
+                                    About
                                 </Link>
                             </ListItemText>
                         </ListItemButton>
-                    </ListItem>
-                    <ListItem onClick={handleDrawerClose}>
-                        <Link
-                            to="/about"
-                            style={{textDecoration: "none", color: "inherit"}}
-                        >
-                            About
-                        </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
                         <ListItemButton>
