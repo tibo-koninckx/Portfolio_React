@@ -43,27 +43,10 @@ export function Navbar() {
                     </IconButton>
                     <div style={{flexGrow: 1}}></div>
                     {/* Add this line to push menu items to the right */}
-                    {/*                    <div className="desktop-menu" style={{display: {xs: 'none', md: 'flex'}}}>
-                        <Link to="/" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
-                            Home
-                        </Link>
-                        <Link to="/about" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
-                            About
-                        </Link>
-                        <Link to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link" target="_blank" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
-                            cv
-                        </Link>
-                        <Link to="/contact" style={{textDecoration: 'none', color: 'inherit', margin: '0 10px'}}>
-                            Contact
-                        </Link>
-                    </div>*/}
                 </Toolbar>
             </AppBar>
 
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose} sx={{
-                display: {xs: 'block'},
-                '& .MuiDrawer-paper': {boxSizing: 'border-box', width: '10%'},
-            }}>
+            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
                 <List>
                     <ListItem onClick={handleDrawerClose}>
                         <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
