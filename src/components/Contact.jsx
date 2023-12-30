@@ -3,6 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
 import * as emailjs from "@emailjs/browser";
+import {useMessageContext} from "../contexts/messageContext";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export function Contact() {
 
     const [alert, setAlert] = useState(null);
     const [close, setClose] = useState(false);
+    const {message, clearMessage, setMessage} = useMessageContext();
 
     function handleInputChange(e) {
         const {name, value} = e.target;
@@ -36,11 +38,13 @@ export function Contact() {
         )
             .then(
                 (result) => {
-                    setAlert(<Alert onClose={() => setClose(true)} severity="success">Email succesfully send</Alert>);
+                    setMessage("Email succesfully send!");
+                    setAlert(<Alert onClose={() => {setClose(true); clearMessage();}} severity="success">{message}</Alert>);
 
                     },
                 (error) => {
-                    setAlert(<Alert onClose={() => setClose(true)} severity="error">Sending mail failed, please try again later!</Alert>);
+                    setMessage("Sending mail failed, please try again later!");
+                    setAlert(<Alert onClose={() => setClose(true)} severity="error">{message}</Alert>);
                 }
             );
 
