@@ -85,13 +85,20 @@ export function Navbar() {
                         </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                        <Link
-                            to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
-                            target="_blank"
-                            style={{textDecoration: "none", color: "inherit"}}
-                        >
-                            CV
-                        </Link>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <DescriptionOutlinedIcon fontSize="small"/>
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Link
+                                    to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
+                                    target="_blank"
+                                    style={{textDecoration: "none", color: "inherit"}}
+                                >
+                                    CV
+                                </Link>
+                            </ListItemText>
+                        </ListItemButton>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
                         <ListItemButton>
