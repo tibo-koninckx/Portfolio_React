@@ -1,12 +1,21 @@
-import {createContext, useCallback, useContext, useState} from "react";
+import {createContext, useCallback, useContext, useMemo, useState} from "react";
 
 const MessageContext = createContext();
-export function MessageProvoider() {
+
+export function MessageProvoider(props) {
     const [message, setMessage] = useState("");
 
     const clearMessage = useCallback(() => {
         setMessage("");
     }, [message]);
+
+    const api = useMemo(() => ({
+        message, setMessage, clearMessage
+    }), [message, setMessage, clearMessage]);
+
+    return <MessageContext.Provoider value={api}>
+        {props.children}
+    </MessageContext.Provoider>
 }
 
 export const useMessageContext = () => useContext(MessageContext);
