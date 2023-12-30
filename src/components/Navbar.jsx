@@ -67,61 +67,53 @@ export function Navbar() {
                 <List>
                     <ListItem onClick={handleDrawerClose}>
                         <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <HomeOutlinedIcon fontSize="small"/>
-                            </ListItemIcon>
-                            <ListItemText>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <HomeOutlinedIcon fontSize="small"/>
+                                </ListItemIcon>
+                                <ListItemText>
                                     Home
-                            </ListItemText>
-                        </ListItemButton>
+                                </ListItemText>
+                            </ListItemButton>
                         </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <AccountCircleOutlinedIcon fontSize="small"/>
-                            </ListItemIcon>
-                            <ListItemText>
-                                <Link
-                                    to="/about"
-                                    style={{textDecoration: "none", color: "inherit"}}
-                                >
+                        <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <AccountCircleOutlinedIcon fontSize="small"/>
+                                </ListItemIcon>
+                                <ListItemText>
                                     About
-                                </Link>
-                            </ListItemText>
-                        </ListItemButton>
+                                </ListItemText>
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <DescriptionOutlinedIcon fontSize="small"/>
-                            </ListItemIcon>
-                            <ListItemText>
-                                <Link
-                                    to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
-                                    target="_blank"
-                                    style={{textDecoration: "none", color: "inherit"}}
-                                >
+                        <Link
+                            to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
+                            target="_blank" style={{textDecoration: "none", color: "inherit"}}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <DescriptionOutlinedIcon fontSize="small"/>
+                                </ListItemIcon>
+                                <ListItemText>
                                     CV
-                                </Link>
-                            </ListItemText>
-                        </ListItemButton>
+                                </ListItemText>
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <ContactPageOutlinedIcon fontSize="small"/>
-                            </ListItemIcon>
-                            <ListItemText>
-                                <Link
-                                    to="/contact"
-                                    style={{textDecoration: "none", color: "inherit"}}
-                                >
+                        <Link to="/contact" style={{textDecoration: "none", color: "inherit"}}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <ContactPageOutlinedIcon fontSize="small"/>
+                                </ListItemIcon>
+                                <ListItemText>
                                     Contact
-                                </Link>
-                            </ListItemText>
-                        </ListItemButton>
+                                </ListItemText>
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                 </List>
             </Drawer>
