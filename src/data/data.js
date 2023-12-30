@@ -33,3 +33,7 @@ export const Interests = [
     <a href="https://www.codefever.be/nl" target="_blank" style={{ color: "white" }}>Codefever</a>,
     ". Codefever is an organization that teaches children to program. As an assistant I have to assist the teacher and help children who have problems."
 ];
+
+export const Projects = [
+    {title: "Portfolio React", description: "Discover my extensive Portfolio with projects, my CV, and information about myself"}
+]
