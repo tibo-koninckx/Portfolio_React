@@ -16,6 +16,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 
 export function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -82,6 +83,18 @@ export function Navbar() {
                                 </ListItemIcon>
                                 <ListItemText>
                                     CV
+                                </ListItemText>
+                            </ListItemButton>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <WorkOutlineOutlinedIcon fontSize="small"/>
+                                </ListItemIcon>
+                                <ListItemText>
+                                    Projects
                                 </ListItemText>
                             </ListItemButton>
                         </Link>
