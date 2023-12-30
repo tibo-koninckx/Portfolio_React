@@ -7,6 +7,7 @@ import {Biogrphy, Frameworks, FullStack, Interests, Tools} from "./data/data";
 import {AboutPage} from "./pages/AboutPage";
 import {ContactPage} from "./pages/ContactPage";
 import {MessageProvoider} from "./contexts/messageContext";
+import {ProjectPage} from "./pages/ProjectPage";
 
 
 function App() {
@@ -25,6 +26,7 @@ function ProvidedApp() {
                 <Route index path={"/"} element={<HomePage/>}/>
                 <Route path={"/about"} element={<AboutPage FullStack={FullStack} Frameworks={Frameworks} Tools={Tools} Bio={Biogrphy} Interests={Interests}/>}/>
                 <Route path={"/contact"} element={<ContactPage/>}/>
+                <Route path={"/projects"} element={<ProjectPage/>}/>
             </Routes>
         </BrowserRouter>
     </>
