@@ -13,9 +13,9 @@ export function MessageProvoider(props) {
         message, setMessage, clearMessage
     }), [message, setMessage, clearMessage]);
 
-    return <MessageContext.Provoider value={api}>
+    return <MessageContext.Provider value={api}>
         {props.children}
-    </MessageContext.Provoider>
+    </MessageContext.Provider>
 }
 
 export const useMessageContext = () => useContext(MessageContext);
