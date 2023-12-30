@@ -28,8 +28,6 @@ export function Contact() {
     function sendEmail(e) {
         e.preventDefault();
 
-        console.log("Form Data:", formData);
-
         emailjs.send(
             process.env.REACT_APP_EMAILJS_SERVICE_ID,
             process.env.REACT_APP_TEMPLATE_ID,
