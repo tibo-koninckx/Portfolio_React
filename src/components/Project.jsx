@@ -4,9 +4,9 @@ export function Project(props) {
     const {projects} = props;
     return <>
         <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
-            <Grid item xs={12} sm={4} md={4} lg={12}>
                 {projects.map((p, index) => (
-                    <Card key={index} sx={{ maxWidth: 345 }}>
+                    <Grid container justifyContent="center" item xs={12} sm={6} md={4} lg={3} key={index}>
+                    <Card sx={{maxWidth: 345, mt:5, mx:{sm:2, md:2, lg:2}}}>
                         {p.image? <CardMedia
                             sx={{ height: 140 }}
                             image={p.image}
@@ -24,8 +24,8 @@ export function Project(props) {
                             <Button size="small" href={p.github} target="_blank">Learn More</Button>
                         </CardActions>
                     </Card>
+                    </Grid>
                     ))}
-            </Grid>
         </Grid>
     </>
 }
