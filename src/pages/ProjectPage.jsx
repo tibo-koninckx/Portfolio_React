@@ -1,7 +1,8 @@
 import {Project} from "../components/Project";
 
-export function ProjectPage() {
+export function ProjectPage(props) {
+    const {projects} = props;
     return <>
-        <Project/>
+        <Project projects={projects}/>
     </>
 }
