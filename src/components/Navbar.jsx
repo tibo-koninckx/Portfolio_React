@@ -87,7 +87,7 @@ export function Navbar() {
                             </ListItemButton>
                         </Link>
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={handleDrawerClose}>
                         <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
                             <ListItemButton>
                                 <ListItemIcon>
