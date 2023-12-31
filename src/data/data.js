@@ -35,5 +35,5 @@ export const Interests = [
 ];
 
 export const Projects = [
-    {title: "Portfolio React", description: "Discover my extensive Portfolio with projects, my CV, and information about myself"}
+    {title: "Portfolio React", description: "Discover my extensive Portfolio with projects, my CV, and information about myself", github: "https://github.com/tibo-koninckx/Portfolio_React"}
 ]
