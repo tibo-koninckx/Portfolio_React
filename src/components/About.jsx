@@ -1,7 +1,7 @@
 import {Grid, Typography} from "@mui/material";
 
 export function About(props) {
-    const {FullStack, Frameworks, Tools, Bio, Interests} = props;
+    const {fullStack, frameworks, tools, bio, interests} = props;
     return (
         <>
             <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
@@ -12,7 +12,7 @@ export function About(props) {
                         textAlign: 'center'
                     }}>About me</Typography>
 
-                    {Bio.length > 0 && (
+                    {bio.length > 0 && (
                         <div>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
@@ -22,7 +22,7 @@ export function About(props) {
 
                             <Typography variant="body1"
                                         sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
-                                {Bio.map((b, index) => (
+                                {bio.map((b, index) => (
                                     <span key={index}>{b}</span>
                                 ))}
                             </Typography>
@@ -35,7 +35,7 @@ export function About(props) {
                         textAlign: 'center'
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
-                        {FullStack.length > 0 && (
+                        {fullStack.length > 0 && (
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
@@ -44,14 +44,14 @@ export function About(props) {
                                         textAlign: 'center'
                                     }}>Full stack web development</Typography>
                                     <ul>
-                                        {FullStack.map((f, index) => (
+                                        {fullStack.map((f, index) => (
                                             <li key={index}>{f.name}</li>
                                         ))}
                                     </ul>
                                 </Typography>
                             </Grid>
                         )}
-                        {Frameworks.length > 0 && (
+                        {frameworks.length > 0 && (
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
@@ -60,14 +60,14 @@ export function About(props) {
                                         textAlign: 'center'
                                     }}>Frameworks</Typography>
                                     <ul>
-                                        {Frameworks.map((f, index) => (
+                                        {frameworks.map((f, index) => (
                                             <li key={index}>{f.name}</li>
                                         ))}
                                     </ul>
                                 </Typography>
                             </Grid>
                         )}
-                        {Tools.length > 0 && (
+                        {tools.length > 0 && (
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
@@ -76,7 +76,7 @@ export function About(props) {
                                         textAlign: 'center'
                                     }}>Tools</Typography>
                                     <ul>
-                                        {Tools.map((t, index) => (
+                                        {tools.map((t, index) => (
                                             <li key={index}>{t.name}</li>
                                         ))}
                                     </ul>
@@ -84,7 +84,7 @@ export function About(props) {
                             </Grid>
                         )}
                     </Grid>
-                    {Interests.length > 0 && (
+                    {interests.length > 0 && (
                         <div>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
@@ -96,7 +96,7 @@ export function About(props) {
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center',
                                             marginX: '25%'
-                                        }}>{Interests.map(i => i)}</Typography>
+                                        }}>{interests.map(i => i)}</Typography>
                         </div>
                     )}
                 </Grid>
