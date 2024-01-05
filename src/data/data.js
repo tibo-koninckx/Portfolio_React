@@ -35,5 +35,5 @@ export const Interests = [
 ];
 
 export const Projects = [
-    {title: "Portfolio React", image: process.env.PUBLIC_URL + '/img/portfolio.jpg', imageTitle: "Portfolio", description: "Discover my extensive Portfolio with projects, my CV, and information about myself", github: "https://github.com/tibo-koninckx/Portfolio_React"},
+    {title: "Portfolio React", image: "https://firebasestorage.googleapis.com/v0/b/portfolio-a46c7.appspot.com/o/img%2Fportfolio.jpg?alt=media&token=e8928ffb-57cd-4638-ba0f-7f35f1db589e", imageTitle: "Portfolio", description: "Discover my extensive Portfolio with projects, my CV, and information about myself", github: "https://github.com/tibo-koninckx/Portfolio_React"},
 ]
