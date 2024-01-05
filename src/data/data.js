@@ -36,4 +36,6 @@ export const Interests = [
 
 export const Projects = [
     {title: "Portfolio React", image: "https://firebasestorage.googleapis.com/v0/b/portfolio-a46c7.appspot.com/o/img%2Fportfolio.jpg?alt=media&token=e8928ffb-57cd-4638-ba0f-7f35f1db589e", imageTitle: "Portfolio", description: "Discover my extensive Portfolio with projects, my CV, and information about myself", github: "https://github.com/tibo-koninckx/Portfolio_React"},
+    {title: "Carousel media player", image: "https://firebasestorage.googleapis.com/v0/b/portfolio-a46c7.appspot.com/o/img%2FmediaPlayer.jpg?alt=media&token=60497c6f-70e1-42fb-b163-248bbeeaa425", imageTitle: "video", description: "For my internship I developed a carousel media player in NextJs", github: "https://github.com/tibo-koninckx/nextjs-carousel-media-player"},
+
 ]
