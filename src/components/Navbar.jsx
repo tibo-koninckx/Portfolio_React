@@ -17,8 +17,12 @@ import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
+import {storage} from "../services/firebase";
+import {ref, getDownloadURL} from "firebase/storage";
 
 export function Navbar() {
+    const [url, setUrl] = useState(null);
+    const cvRef = ref(storage, 'cv/cv.pdf');
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -28,8 +32,16 @@ export function Navbar() {
     const handleDrawerClose = () => {
         setDrawerOpen(false);
     };
-    return <>
 
+        getDownloadURL(cvRef)
+            .then((url) => {
+                setUrl(url)
+            }).catch(() => {
+                setUrl(null);
+                console.error("Cv kan niet worden geladen")
+        })
+
+    return <>
         <div>
             <AppBar position="sticky">
                 <Toolbar>
@@ -75,7 +87,7 @@ export function Navbar() {
                     </ListItem>
                     <ListItem onClick={handleDrawerClose}>
                         <Link
-                            to="https://drive.google.com/file/d/1ZcUIGm7GHuWhyhfnpdCv-Xe66H4zCltT/view?usp=drive_link"
+                            to={url}
                             target="_blank" style={{textDecoration: "none", color: "inherit"}}>
                             <ListItemButton>
                                 <ListItemIcon>
