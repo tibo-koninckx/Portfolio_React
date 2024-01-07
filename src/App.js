@@ -27,6 +27,7 @@ function ProvidedApp() {
                 <Route path={"/about"} element={<AboutPage fullStack={FullStack} frameworks={Frameworks} tools={Tools} bio={Biogrphy} interests={Interests}/>}/>
                 <Route path={"/contact"} element={<ContactPage/>}/>
                 <Route path={"/projects"} element={<ProjectPage projects={Projects}/>}/>
+                <Route path={"*"} element={<HomePage/>}/>
             </Routes>
         </BrowserRouter>
     </>
