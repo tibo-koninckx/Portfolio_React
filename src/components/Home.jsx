@@ -28,11 +28,11 @@ export function Home() {
                         }}>+32 486 54 45 01</Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                             <motion.div whileHover={{scale: 1.2}}>
-                                <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
+                                <Link to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
                                     color="info" fontSize="large" sx={{mr: 2}}/></Link>
                             </motion.div>
                             <motion.div whileHover={{scale: 1.2}}>
-                                <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
+                                <Link to="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
                                                                                                           fontSize="large"/></Link>
                             </motion.div>
                         </Box>
