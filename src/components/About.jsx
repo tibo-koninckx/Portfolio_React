@@ -13,7 +13,7 @@ export function About(props) {
                     }}>About me</Typography>
 
                     {bio.length > 0 && (
-                        <Box sx={{background: '#555555', marginLeft: '15%', marginRight: '15%'}}>
+                        <Box sx={{background: '#555555', marginLeft:{lg: '15%', xl:'15%', md:'15%'}, marginRight: {lg: '15%', xl:'15%', md:'15%'}}}>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
@@ -36,7 +36,7 @@ export function About(props) {
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
                         {fullStack.length > 0 && (
-                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555'}}>
+                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}}}>
                                     <Typography variant="body1" className="no-first-letter"
                                                 sx={{fontFamily: 'Nunito, sans-serif'}}>
                                         <Typography variant="h4" sx={{
@@ -52,7 +52,7 @@ export function About(props) {
                                 </Grid>
                         )}
                         {frameworks.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:2, lg:2}}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:2, lg:2}, mt:{md:4, xs:4, sm:4}}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
@@ -68,7 +68,7 @@ export function About(props) {
                             </Grid>
                         )}
                         {tools.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555'}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
@@ -85,19 +85,24 @@ export function About(props) {
                         )}
                     </Grid>
                     {interests.length > 0 && (
-                        <div>
+                        <Box>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
+                                marginBottom:'2%',
                                 textAlign: 'center'
                             }}>Personal interests</Typography>
-                            <Typography variant="body1"
-                                        sx={{
-                                            fontFamily: 'Nunito, sans-serif',
-                                            textAlign: 'center',
-                                            marginX: '25%'
-                                        }}>{interests.map(i => i)}</Typography>
-                        </div>
+                            <Box sx={{background: '#555555', marginLeft:{lg: '15%', xl:'15%', md:'15%'}, marginRight: {lg: '15%', xl:'15%', md:'15%'}, mb:5}}>
+                                <Typography variant="body1"
+                                            sx={{
+                                                fontFamily: 'Nunito, sans-serif',
+                                                textAlign: 'center',
+
+                                                marginX: '25%'
+                                            }}>{interests.map(i => i)}</Typography>
+                            </Box>
+
+                        </Box>
                     )}
                 </Grid>
             </Grid>
