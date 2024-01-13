@@ -5,16 +5,19 @@ import {Biogrphy, Frameworks, FullStack, Interests, Projects, Tools} from "../da
 import {ContactPage} from "../pages/ContactPage";
 import {ProjectPage} from "../pages/ProjectPage";
 import React from "react";
+import {AnimatePresence} from "framer-motion"
 
 export function AnimatedRoutes() {
     const location = useLocation();
     return <>
-        <Routes location={location} key={location.pathname}>
-            <Route index path={"/"} element={<HomePage/>}/>
-            <Route path={"/about"} element={<AboutPage fullStack={FullStack} frameworks={Frameworks} tools={Tools} bio={Biogrphy} interests={Interests}/>}/>
-            <Route path={"/contact"} element={<ContactPage/>}/>
-            <Route path={"/projects"} element={<ProjectPage projects={Projects}/>}/>
-            <Route path={"*"} element={<HomePage/>}/>
-        </Routes>
+        <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
+                <Route index path={"/"} element={<HomePage/>}/>
+                <Route path={"/about"} element={<AboutPage fullStack={FullStack} frameworks={Frameworks} tools={Tools} bio={Biogrphy} interests={Interests}/>}/>
+                <Route path={"/contact"} element={<ContactPage/>}/>
+                <Route path={"/projects"} element={<ProjectPage projects={Projects}/>}/>
+                <Route path={"*"} element={<HomePage/>}/>
+            </Routes>
+        </AnimatePresence>
     </>
 }
