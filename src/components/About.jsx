@@ -4,7 +4,7 @@ export function About(props) {
     const {fullStack, frameworks, tools, bio, interests} = props;
     return (
         <>
-            <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
+            <Grid container>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Typography variant="h2" sx={{
                         fontFamily: 'Nunito, sans-serif',

@@ -3,7 +3,7 @@ import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} fro
 export function Project(props) {
     const {projects} = props;
     return <>
-        <Grid container sx={{maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
+        <Grid container>
                 {projects.map((p, index) => (
                     <Grid container justifyContent="center" item xs={12} sm={6} md={4} lg={3} key={index}>
                     <Card sx={{maxWidth: 345, mt:5, mx:{sm:2, md:2, lg:2}}}>
