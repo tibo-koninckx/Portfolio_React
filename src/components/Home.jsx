@@ -1,6 +1,6 @@
 import {Container, Grid, Typography} from "@mui/material";
 
-export function Header() {
+export function Home() {
     return <>
         <Grid sx={{ maxHeight: 'calc(100vh - 100px)', overflowY: 'auto'}}>
             <Grid item xs={12} sm={12} md={8} lg={8}>
