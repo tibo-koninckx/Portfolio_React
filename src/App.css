@@ -1,13 +1,6 @@
 body {
     font-family: Nunito, sans-serif !important;
-    margin: 0;
-    padding: 0;
-    background-image: url('../public/img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
+    background-color: #333333;
     color: white;
 }
 
