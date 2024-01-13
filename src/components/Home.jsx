@@ -1,7 +1,8 @@
-import {Box, Container, Grid, Link, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, Link, Typography} from "@mui/material";
 import {motion} from "framer-motion"
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import {useState} from "react";
 
 export function Home() {
     return <>
@@ -16,7 +17,6 @@ export function Home() {
                         mx: 2
                     }}>Full stack Web developer</Typography>
                     <Typography variant="h3" sx={{
-                        fontFamily: 'Nunito, sans-serif',
                         mt: 5,
                         mx: 2
                     }}><a style={{color:'white', textDecoration: 'none'}} href="mailto:tibo.koninckx@gmail.com">tibo.koninckx@gmail.com</a></Typography>
@@ -26,13 +26,21 @@ export function Home() {
                         mx: 2
                     }}>+32 486 54 45 01</Typography>
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <motion.div whileHover={{scale: 1.5}}>
+                        <motion.div whileHover={{scale: 1.2}}>
                             <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
                                 color="info" fontSize="large" sx={{mr: 2}}/></Link>
                         </motion.div>
-                        <motion.div whileHover={{scale: 1.5}}>
+                        <motion.div whileHover={{scale: 1.2}}>
                             <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
                                                                                                       fontSize="large"/></Link>
+                        </motion.div>
+                    </Box>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', mt:4}}>
+                        <motion.div whileHover={{scale: 1.2}}>
+                            <Button variant="contained" color="primary" href="/about" sx={{mr:4}} size="large">About me</Button>
+                        </motion.div>
+                        <motion.div whileHover={{scale: 1.2}}>
+                            <Button variant="contained" color="primary" href="/projects" size="large">My projects</Button>
                         </motion.div>
                     </Box>
                 </Container>
