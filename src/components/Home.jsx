@@ -2,7 +2,6 @@ import {Box, Button, Container, Grid, Link, Typography} from "@mui/material";
 import {motion} from "framer-motion"
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import {useState} from "react";
 
 export function Home() {
     return <>
