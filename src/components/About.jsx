@@ -1,4 +1,4 @@
-import {Grid, Typography} from "@mui/material";
+import {Box, Grid, Typography} from "@mui/material";
 
 export function About(props) {
     const {fullStack, frameworks, tools, bio, interests} = props;
@@ -13,7 +13,7 @@ export function About(props) {
                     }}>About me</Typography>
 
                     {bio.length > 0 && (
-                        <div>
+                        <Box sx={{background: '#555555', marginLeft: '15%', marginRight: '15%'}}>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
@@ -26,7 +26,7 @@ export function About(props) {
                                     <span key={index}>{b}</span>
                                 ))}
                             </Typography>
-                        </div>
+                        </Box>
                     )}
 
                     <Typography variant="h2" sx={{
@@ -36,23 +36,23 @@ export function About(props) {
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
                         {fullStack.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
-                                <Typography variant="body1" className="no-first-letter"
-                                            sx={{fontFamily: 'Nunito, sans-serif'}}>
-                                    <Typography variant="h4" sx={{
-                                        fontFamily: 'Nunito, sans-serif',
-                                        textAlign: 'center'
-                                    }}>Full stack web development</Typography>
-                                    <ul>
-                                        {fullStack.map((f, index) => (
-                                            <li key={index}>{f.name}</li>
-                                        ))}
-                                    </ul>
-                                </Typography>
-                            </Grid>
+                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555'}}>
+                                    <Typography variant="body1" className="no-first-letter"
+                                                sx={{fontFamily: 'Nunito, sans-serif'}}>
+                                        <Typography variant="h4" sx={{
+                                            fontFamily: 'Nunito, sans-serif',
+                                            textAlign: 'center'
+                                        }}>Full stack web development</Typography>
+                                        <ul>
+                                            {fullStack.map((f, index) => (
+                                                <li key={index}>{f.name}</li>
+                                            ))}
+                                        </ul>
+                                    </Typography>
+                                </Grid>
                         )}
                         {frameworks.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:2, lg:2}}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
@@ -68,7 +68,7 @@ export function About(props) {
                             </Grid>
                         )}
                         {tools.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center'}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555'}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
