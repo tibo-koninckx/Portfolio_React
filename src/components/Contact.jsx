@@ -50,11 +50,9 @@ export function Contact() {
     }
     return <>
         <Box component="form" onSubmit={sendEmail} autoComplete="off" sx={{
-            background: 'white',
-            height: '100vh',
             '& .MuiTextField-root': {m: 1, width: {lg: '50ch', md: '100%', sm: '100%', xs: '100%'}}
         }}>
-            <Box sx={{color: 'black'}}>
+            <Box>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
                     Me</Typography>
                 <Divider>Let's connect</Divider>
@@ -68,20 +66,44 @@ export function Contact() {
                 flexWrap: 'wrap'}}>
                 <Grid>
                     <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt: 5}}>
-                        <TextField sx={{mr: 2}}
+                        <TextField sx={{mr:2, '& label': {
+                                color: 'white',
+                            },     '& fieldset': {
+                                borderColor: 'white',
+                            },
+                            '& .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                            '&:hover .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                        }}
+                                   color="warning"
                                    id="FirstName"
                                    label="FirstName"
-                                   variant="outlined"
+                                   variant="filled"
                                    margin="normal"
                                    name="firstName"
                                    onChange={handleInputChange}
                                    required
                         />
 
-                        <TextField
+                        <TextField sx={{'& label': {
+                                color: 'white',
+                            },     '& fieldset': {
+                                borderColor: 'white',
+                            },
+                            '& .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                            '&:hover .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                        }}
+                            color="warning"
                             id="LastName"
                             label="LastName"
-                            variant="outlined"
+                            variant="filled"
                             margin="normal"
                             name="lastName"
                             onChange={handleInputChange}
@@ -89,10 +111,22 @@ export function Contact() {
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={8} lg={12}>
-                        <TextField
+                        <TextField sx={{'& label': {
+                                color: 'white',
+                            },     '& fieldset': {
+                                borderColor: 'white',
+                            },
+                            '& .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                            '&:hover .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                        }}
+                            color="warning"
                             id="email"
                             label="email"
-                            variant="outlined"
+                            variant="filled"
                             margin="normal"
                             name="email"
                             onChange={handleInputChange}
@@ -100,10 +134,22 @@ export function Contact() {
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <TextField
+                        <TextField sx={{
+                            mr: 2,
+                            '& label': {
+                                color: 'white',
+                            },
+                            '& .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                            '&:hover .MuiFilledInput-underline:before': {
+                                borderBottomColor: 'white !important',
+                            },
+                        }}
+                            color="warning"
                             id="message"
                             label="Message"
-                            variant="outlined"
+                            variant="filled"
                             margin="normal"
                             name="message"
                             onChange={handleInputChange}
