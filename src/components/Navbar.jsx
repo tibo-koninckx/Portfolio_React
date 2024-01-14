@@ -50,7 +50,7 @@ export function Navbar() {
     return (
         <>
             <div>
-                <AppBar position="sticky">
+                <AppBar position="sticky" sx={{background: '#444444'}}>
                     <Toolbar>
                         {isMobile && (
                             <IconButton
