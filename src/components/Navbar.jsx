@@ -22,6 +22,7 @@ import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import { storage } from "../services/firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 import { motion } from "framer-motion";
+import {NavbarHover} from "./NavbarHover";
 
 export function Navbar() {
     const [url, setUrl] = useState(null);
@@ -72,18 +73,22 @@ export function Navbar() {
                                     <ListItem onClick={handleDrawerClose}>
                                         <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
                                             <ListItemButton>
-                                                <ListItemText>
-                                                    Home
-                                                </ListItemText>
+                                                <NavbarHover>
+                                                    <ListItemText>
+                                                        Home
+                                                    </ListItemText>
+                                                </NavbarHover>
                                             </ListItemButton>
                                         </Link>
                                     </ListItem>
                                     <ListItem onClick={handleDrawerClose}>
                                         <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
                                             <ListItemButton>
-                                                <ListItemText>
-                                                    About
-                                                </ListItemText>
+                                                <NavbarHover>
+                                                    <ListItemText>
+                                                        About
+                                                    </ListItemText>
+                                                </NavbarHover>
                                             </ListItemButton>
                                         </Link>
                                     </ListItem>
@@ -92,27 +97,33 @@ export function Navbar() {
                                             to={url}
                                             target="_blank" style={{textDecoration: "none", color: "inherit"}}>
                                             <ListItemButton>
-                                                <ListItemText>
-                                                    CV
-                                                </ListItemText>
+                                                <NavbarHover>
+                                                    <ListItemText>
+                                                        CV
+                                                    </ListItemText>
+                                                </NavbarHover>
                                             </ListItemButton>
                                         </Link>
                                     </ListItem>
                                     <ListItem onClick={handleDrawerClose}>
                                         <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
                                             <ListItemButton>
-                                                <ListItemText>
-                                                    Projects
-                                                </ListItemText>
+                                                <NavbarHover>
+                                                    <ListItemText>
+                                                        Projects
+                                                    </ListItemText>
+                                                </NavbarHover>
                                             </ListItemButton>
                                         </Link>
                                     </ListItem>
                                     <ListItem onClick={handleDrawerClose}>
                                         <Link to="/contact" style={{textDecoration: "none", color: "inherit"}}>
                                             <ListItemButton>
-                                                <ListItemText>
-                                                    Contact
-                                                </ListItemText>
+                                                <NavbarHover>
+                                                    <ListItemText>
+                                                        Contact
+                                                    </ListItemText>
+                                                </NavbarHover>
                                             </ListItemButton>
                                         </Link>
                                     </ListItem>
