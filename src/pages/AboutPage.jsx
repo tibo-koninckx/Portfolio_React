@@ -1,8 +1,11 @@
 import {About} from "../components/About";
+import {PageAnimation} from "../components/PageAnimation";
 
 export function AboutPage(props) {
     const {fullStack, frameworks, tools, bio, interests} = props;
     return <>
-        <About fullStack={fullStack} frameworks={frameworks} tools={tools} bio={bio} interests={interests}/>
+        <PageAnimation>
+            <About fullStack={fullStack} frameworks={frameworks} tools={tools} bio={bio} interests={interests}/>
+        </PageAnimation>
     </>
 }
