@@ -13,7 +13,7 @@ export function About(props) {
                     }}>About me</Typography>
 
                     {bio.length > 0 && (
-                        <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}}}>
+                        <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2}}>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
@@ -36,7 +36,7 @@ export function About(props) {
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
                         {fullStack.length > 0 && (
-                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}}}>
+                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                     <Typography variant="body1" className="no-first-letter"
                                                 sx={{fontFamily: 'Nunito, sans-serif'}}>
                                         <Typography variant="h4" sx={{
@@ -52,7 +52,7 @@ export function About(props) {
                                 </Grid>
                         )}
                         {frameworks.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:3, lg:3}, mt:{md:4, xs:4, sm:4}}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:3, lg:3}, mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
@@ -68,7 +68,7 @@ export function About(props) {
                             </Grid>
                         )}
                         {tools.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
@@ -92,7 +92,7 @@ export function About(props) {
                                 marginBottom:'2%',
                                 textAlign: 'center'
                             }}>Personal interests</Typography>
-                            <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, mb:5}}>
+                            <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, mb:5, pb:2, pt:2}}>
                                 <Typography variant="body1"
                                             sx={{
                                                 fontFamily: 'Nunito, sans-serif',
