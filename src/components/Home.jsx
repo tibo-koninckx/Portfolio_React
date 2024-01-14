@@ -3,10 +3,11 @@ import {motion} from "framer-motion"
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import {Link} from "react-router-dom";
+import {PageAnimation} from "./PageAnimation";
 
 export function Home() {
     return <>
-        <motion.div>
+        <PageAnimation>
             <Grid>
                 <Grid item xs={12} sm={12} md={8} lg={8}>
                     <Container style={{textAlign: 'center'}}>
@@ -19,7 +20,6 @@ export function Home() {
                         }}>Full stack Web developer</Typography>
                         <Typography variant="h3" sx={{
                             mt: 5,
-                            mx: 2
                         }}><a style={{color:'white', textDecoration: 'none'}} href="mailto:tibo.koninckx@gmail.com">tibo.koninckx@gmail.com</a></Typography>
                         <Typography variant="h3" sx={{
                             fontFamily: 'Nunito, sans-serif',
@@ -47,6 +47,6 @@ export function Home() {
                     </Container>
                 </Grid>
             </Grid>
-        </motion.div>
+        </PageAnimation>
     </>
 }
