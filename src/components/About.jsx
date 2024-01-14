@@ -16,7 +16,7 @@ export function About(props) {
 
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
                                 <Typography variant="body1"
-                                            sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
+                                            sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%', fontSize: 20}}>
                                     {bio.map((b, index) => (
                                         <span key={index}>{b}</span>
                                     ))}
@@ -40,7 +40,7 @@ export function About(props) {
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center'
                                         }}>Full stack web development</Typography>
-                                        <ul>
+                                        <ul style={{fontSize:20}}>
                                             {fullStack.map((f, index) => (
                                                 <li key={index}>{f.name}</li>
                                             ))}
@@ -56,7 +56,7 @@ export function About(props) {
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Frameworks</Typography>
-                                    <ul>
+                                    <ul style={{fontSize:20}}>
                                         {frameworks.map((f, index) => (
                                             <li key={index}>{f.name}</li>
                                         ))}
@@ -72,7 +72,7 @@ export function About(props) {
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Tools</Typography>
-                                    <ul>
+                                    <ul style={{fontSize:20}}>
                                         {tools.map((t, index) => (
                                             <li key={index}>{t.name}</li>
                                         ))}
@@ -94,7 +94,7 @@ export function About(props) {
                                             sx={{
                                                 fontFamily: 'Nunito, sans-serif',
                                                 textAlign: 'center',
-
+                                                fontSize: 20,
                                                 marginX: '25%'
                                             }}>{interests.map(i => i)}</Typography>
                             </Box>
