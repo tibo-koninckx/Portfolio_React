@@ -57,7 +57,7 @@ export function Contact() {
             <Box>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
                     Me</Typography>
-                <Divider>Let's connect</Divider>
+                <Typography variant="body1" sx={{textAlign: 'center', fontFamily: 'Nunito, sans-serif'}} className="no-first-letter">Let's connect</Typography>
             </Box>
             <Box>{!close && alert}</Box>
             <Box sx={{
