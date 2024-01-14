@@ -6,26 +6,23 @@ export function About(props) {
         <>
             <Grid container>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Typography variant="h2" sx={{
-                        fontFamily: 'Nunito, sans-serif',
-                        marginTop: {xs: '8%', sm: '3%', lg: '3%'},
-                        textAlign: 'center'
-                    }}>About me</Typography>
-
                     {bio.length > 0 && (
-                        <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2}}>
+                        <Box>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
                                 textAlign: 'center'
                             }}>Biography</Typography>
 
-                            <Typography variant="body1"
-                                        sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
-                                {bio.map((b, index) => (
-                                    <span key={index}>{b}</span>
-                                ))}
-                            </Typography>
+                            <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
+                                <Typography variant="body1"
+                                            sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%'}}>
+                                    {bio.map((b, index) => (
+                                        <span key={index}>{b}</span>
+                                    ))}
+                                </Typography>
+                            </Box>
+
                         </Box>
                     )}
 
