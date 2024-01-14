@@ -1,9 +1,11 @@
-import {Alert, Box, Button, Divider, Grid, Link, TextField, Typography} from "@mui/material";
+import {Alert, Box, Button, Divider, Grid, TextField, Typography} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
+import {motion} from "framer-motion";
+import {Link} from "react-router-dom";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -164,19 +166,19 @@ export function Contact() {
                     </Grid>
                 </Grid>
             </Box>
-            <Box sx={{mt: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexWrap: 'wrap'}}>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Link href="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon color="primary"
-                                                                                                        fontSize="large"
-                                                                                                        sx={{mr: 2}}/></Link>
-                    <Link href="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
-                                                                                              fontSize="large"/></Link>
+                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <motion.div whileHover={{scale: 1.2}}>
+                            <Link to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
+                                color="info" fontSize="large" sx={{mr: 2}}/></Link>
+                        </motion.div>
+                        <motion.div whileHover={{scale: 1.2}}>
+                            <Link to="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
+                                                                                                    fontSize="large"/></Link>
+                        </motion.div>
+                    </Box>
                 </Grid>
-            </Box>
+
         </Box>
     </>
 }
