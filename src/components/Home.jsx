@@ -3,11 +3,9 @@ import {motion} from "framer-motion"
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import {Link} from "react-router-dom";
-import {PageAnimation} from "./PageAnimation";
 
 export function Home() {
     return <>
-        <PageAnimation>
             <Grid>
                 <Grid item xs={12} sm={12} md={8} lg={8}>
                     <Container style={{textAlign: 'center'}}>
@@ -47,6 +45,5 @@ export function Home() {
                     </Container>
                 </Grid>
             </Grid>
-        </PageAnimation>
     </>
 }
