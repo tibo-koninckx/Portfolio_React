@@ -2,7 +2,7 @@ import {motion} from "framer-motion";
 import {useTheme} from "@mui/material";
 import React from "react";
 
-export function Navbarhover(props) {
+export function NavbarHover(props) {
     const {children} = props
     const theme = useTheme();
     return <>
