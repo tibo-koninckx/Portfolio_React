@@ -16,7 +16,7 @@ export function Project(props) {
                             <Typography sx={{fontFamily: 'Nunito, sans-serif'}} gutterBottom variant="h5" component="div">
                                 {p.title}
                             </Typography>
-                            <Typography sx={{fontFamily: 'Nunito, sans-serif'}} variant="body2" color="text.secondary">
+                            <Typography sx={{fontFamily: 'Nunito, sans-serif'}} variant="body1" color="text.secondary">
                                 {p.description}
                             </Typography>
                         </CardContent>
