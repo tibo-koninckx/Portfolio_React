@@ -13,16 +13,12 @@ import {
     useMediaQuery,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import { storage } from "../services/firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 import { motion } from "framer-motion";
 import {NavbarHover} from "./NavbarHover";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars, faHouse, faBriefcase, faAddressCard, faFile, faUser} from "@fortawesome/free-solid-svg-icons";
 
 export function Navbar() {
     const [url, setUrl] = useState(null);
@@ -61,7 +57,7 @@ export function Navbar() {
                                 onClick={handleDrawerOpen}
                                 sx={{ mr: 2, display: { xs: "block", md: "none" } }}
                             >
-                                <MenuIcon />
+                                <FontAwesomeIcon icon={faBars} />
                             </IconButton>
                         )}
                         <div style={{ flexGrow: 1 }}></div>
@@ -148,7 +144,7 @@ export function Navbar() {
                                 <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <HomeOutlinedIcon fontSize="small"/>
+                                            <FontAwesomeIcon icon={faHouse} size="lg"/>
                                         </ListItemIcon>
                                         <ListItemText>
                                             Home
@@ -160,7 +156,7 @@ export function Navbar() {
                                 <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <AccountCircleOutlinedIcon fontSize="small"/>
+                                            <FontAwesomeIcon icon={faUser} size="lg"/>
                                         </ListItemIcon>
                                         <ListItemText>
                                             About
@@ -174,7 +170,7 @@ export function Navbar() {
                                     target="_blank" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <DescriptionOutlinedIcon fontSize="small"/>
+                                            <FontAwesomeIcon icon={faFile} size="lg"/>
                                         </ListItemIcon>
                                         <ListItemText>
                                             CV
@@ -186,7 +182,7 @@ export function Navbar() {
                                 <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <WorkOutlineOutlinedIcon fontSize="small"/>
+                                            <FontAwesomeIcon icon={faBriefcase} />
                                         </ListItemIcon>
                                         <ListItemText>
                                             Projects
@@ -198,7 +194,7 @@ export function Navbar() {
                                 <Link to="/contact" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <ContactPageOutlinedIcon fontSize="small"/>
+                                            <FontAwesomeIcon icon={faAddressCard} size="lg"/>
                                         </ListItemIcon>
                                         <ListItemText>
                                             Contact
