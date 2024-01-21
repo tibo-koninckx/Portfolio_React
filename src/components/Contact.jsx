@@ -1,6 +1,4 @@
 import {Alert, Box, Button, Divider, Grid, TextField, Typography} from "@mui/material";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";

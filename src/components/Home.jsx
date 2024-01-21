@@ -1,7 +1,5 @@
 import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import {motion} from "framer-motion"
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
