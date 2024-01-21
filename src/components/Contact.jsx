@@ -6,6 +6,8 @@ import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -169,12 +171,10 @@ export function Contact() {
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                         <motion.div whileHover={{scale: 1.2}}>
-                            <Link to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
-                                color="info" fontSize="large" sx={{mr: 2}}/></Link>
+                            <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
                         </motion.div>
                         <motion.div whileHover={{scale: 1.2}}>
-                            <Link to="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
-                                                                                                    fontSize="large"/></Link>
+                            <Link className="no-style" to="https://github.com/tibo-koninckx" target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl" /></Link>
                         </motion.div>
                     </Box>
                 </Grid>

@@ -3,7 +3,8 @@ import {motion} from "framer-motion"
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import {Link} from "react-router-dom";
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 export function Home() {
     return <>
             <Grid>
@@ -26,12 +27,10 @@ export function Home() {
                         }}>+32 486 54 45 01</Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                             <motion.div whileHover={{scale: 1.2}}>
-                                <Link to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><LinkedInIcon
-                                    color="info" fontSize="large" sx={{mr: 2}}/></Link>
+                                <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
                             </motion.div>
                             <motion.div whileHover={{scale: 1.2}}>
-                                <Link to="https://github.com/tibo-koninckx" target="_blank"><GitHubIcon color="success"
-                                                                                                          fontSize="large"/></Link>
+                                <Link className="no-style" to="https://github.com/tibo-koninckx" target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl" /></Link>
                             </motion.div>
                         </Box>
                         <Box sx={{ display: 'flex', justifyContent: 'center', mt:4}}>
