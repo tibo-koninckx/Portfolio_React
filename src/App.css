@@ -5,7 +5,7 @@ body {
 }
 
 p::first-letter {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
