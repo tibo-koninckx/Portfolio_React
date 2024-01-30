@@ -1,4 +1,6 @@
 import {Box, Grid, Typography} from "@mui/material";
+import {ConvertToMarkdown} from "./ConvertMdToJs";
+import Biography from "../content/about/Biography.md";
 
 export function About(props) {
     const {fullStack, frameworks, tools, bio, interests} = props;
@@ -17,9 +19,7 @@ export function About(props) {
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
                                 <Typography variant="body1"
                                             sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%', fontSize: 20}}>
-                                    {bio.map((b, index) => (
-                                        <span key={index}>{b}</span>
-                                    ))}
+                                    <ConvertToMarkdown mdFille={Biography}/>
                                 </Typography>
                             </Box>
 
