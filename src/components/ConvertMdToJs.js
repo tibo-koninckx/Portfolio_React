@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 import {Box} from "@mui/material";
 
 export function ConvertToMarkdown(props) {
-    const {mdFille} =props
+    const {mdFille, className} =props
     let [readable, setReadable] = useState({ md: "" });
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export function ConvertToMarkdown(props) {
 
     return (
         <Box>
-            <Markdown children={readable.md} />
+            <Markdown className={className} children={readable.md} />
         </Box>
     );
 }
