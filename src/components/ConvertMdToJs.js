@@ -14,9 +14,17 @@ export function ConvertToMarkdown(props) {
             });
     }, []);
 
+    const components = {
+        a: ({ node, ...props }) => (
+            <a {...props} target="_blank" rel="noopener noreferrer">
+                {props.children}
+            </a>
+        ),
+    };
+
     return (
         <Box>
-            <Markdown className={className} children={readable.md} />
+            <Markdown className={className} children={readable.md} components={components}/>
         </Box>
     );
 }
