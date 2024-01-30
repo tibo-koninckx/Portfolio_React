@@ -1,6 +1,7 @@
 import {Box, Grid, Typography} from "@mui/material";
 import {ConvertToMarkdown} from "./ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
+import PersonalInterests from "../content/about/Personal-interests.md"
 
 export function About(props) {
     const {fullStack, frameworks, tools, bio, interests} = props;
@@ -96,7 +97,7 @@ export function About(props) {
                                                 textAlign: 'center',
                                                 fontSize: 20,
                                                 marginX: '25%'
-                                            }}>{interests.map(i => i)}</Typography>
+                                            }}><ConvertToMarkdown mdFille={PersonalInterests}/></Typography>
                             </Box>
 
                         </Box>
