@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Markdown from "react-markdown";
 import {Box} from "@mui/material";
 
-export function ConvertToMarkdown(props) {
+export function ConvertMdToJs(props) {
     const {mdFille, className} =props
     let [readable, setReadable] = useState({ md: "" });
 
