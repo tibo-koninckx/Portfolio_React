@@ -1,5 +1,5 @@
 import {Box, Grid, Typography} from "@mui/material";
-import {ConvertToMarkdown} from "./ConvertMdToJs";
+import {ConvertMdToJs} from "./ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
 
@@ -20,7 +20,7 @@ export function About(props) {
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
                                 <Typography variant="body1"
                                             sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%', fontSize: 20}}>
-                                    <ConvertToMarkdown mdFille={Biography}/>
+                                    <ConvertMdToJs mdFille={Biography}/>
                                 </Typography>
                             </Box>
 
@@ -97,7 +97,7 @@ export function About(props) {
                                                 textAlign: 'center',
                                                 fontSize: 20,
                                                 marginX: '25%'
-                                            }}><ConvertToMarkdown mdFille={PersonalInterests}/></Typography>
+                                            }}><ConvertMdToJs className="md-url" mdFille={PersonalInterests}/></Typography>
                             </Box>
 
                         </Box>
