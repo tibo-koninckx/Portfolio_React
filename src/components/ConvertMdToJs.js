@@ -1,18 +1,20 @@
-import {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
+import {ExtractTitleAndContent} from "./ExtractTitleAndContent";
 
 export function ConvertMdToJs(props) {
-    const {mdFille, className} =props
-    let [readable, setReadable] = useState({ md: "" });
+    const { mdFilePath, className, display } = props;
+    const [readable, setReadable] = useState({ title: "", content: "" });
 
     useEffect(() => {
-        fetch(mdFille)
+        fetch(mdFilePath)
             .then((res) => res.text())
             .then((md) => {
-                setReadable({ md });
+                const { title, content } = ExtractTitleAndContent(md);
+                setReadable({ title, content });
             });
-    }, []);
+    }, [mdFilePath]);
 
     const components = {
         a: ({ node, ...props }) => (
@@ -24,7 +26,12 @@ export function ConvertMdToJs(props) {
 
     return (
         <Box>
-            <Markdown className={className} children={readable.md} components={components}/>
+            {display === "title" && (
+                <div className={`title ${className}`}>{readable.title}</div>
+            )}
+            {display === "content" && (
+                <Markdown className={`content ${className}`} children={readable.content} components={components} />
+            )}
         </Box>
     );
 }
