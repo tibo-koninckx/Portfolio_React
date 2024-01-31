@@ -15,12 +15,12 @@ export function About(props) {
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
                                 textAlign: 'center'
-                            }}>Biography</Typography>
+                            }}> <ConvertMdToJs mdFilePath={Biography} display="title" /></Typography>
 
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
                                 <Typography variant="body1"
                                             sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%', fontSize: 20}}>
-                                    <ConvertMdToJs mdFille={Biography}/>
+                                    <ConvertMdToJs mdFilePath={Biography} display="content" />
                                 </Typography>
                             </Box>
 
@@ -89,7 +89,7 @@ export function About(props) {
                                 marginTop: '2%',
                                 marginBottom:'2%',
                                 textAlign: 'center'
-                            }}>Personal interests</Typography>
+                            }}><ConvertMdToJs mdFilePath={PersonalInterests} display="title" /></Typography>
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, mb:5, pb:2, pt:2}}>
                                 <Typography variant="body1"
                                             sx={{
@@ -97,7 +97,7 @@ export function About(props) {
                                                 textAlign: 'center',
                                                 fontSize: 20,
                                                 marginX: '25%'
-                                            }}><ConvertMdToJs className="md-url" mdFille={PersonalInterests}/></Typography>
+                                            }}><ConvertMdToJs mdFilePath={PersonalInterests} className="md-url" display="content" /></Typography>
                             </Box>
 
                         </Box>
