@@ -1,6 +1,6 @@
 export function ExtractTitleAndContent (md)  {
-    const delimiterIndex = md.indexOf('---', 11);
-    const title = md.substring(11, delimiterIndex).trim();
-    const content = md.substring(delimiterIndex + 11).trim();
+    const delimiterIndex = md.indexOf('---', 4);
+    const title = md.substring(4, delimiterIndex).trim();
+    const content = md.substring(delimiterIndex + 4).trim();
     return { title, content };
 };
