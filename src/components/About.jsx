@@ -2,14 +2,14 @@ import {Box, Grid, Typography} from "@mui/material";
 import {ConvertMdToJs} from "./ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
+import {Logo} from "./Logo";
+import {LogoFlexContainer} from "./LogoFlexContainer";
 
-export function About(props) {
-    const {fullStack, frameworks, tools, bio, interests} = props;
+export function About() {
     return (
         <>
             <Grid container>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    {bio.length > 0 && (
                         <Box>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
@@ -25,7 +25,6 @@ export function About(props) {
                             </Box>
 
                         </Box>
-                    )}
 
                     <Typography variant="h2" sx={{
                         fontFamily: 'Nunito, sans-serif',
@@ -33,7 +32,6 @@ export function About(props) {
                         textAlign: 'center'
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
-                        {fullStack.length > 0 && (
                                 <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                     <Typography variant="body1" className="no-first-letter"
                                                 sx={{fontFamily: 'Nunito, sans-serif'}}>
@@ -41,31 +39,73 @@ export function About(props) {
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center'
                                         }}>Full stack web development</Typography>
-                                        <ul style={{fontSize:20}}>
-                                            {fullStack.map((f, index) => (
-                                                <li key={index}>{f.name}</li>
-                                            ))}
-                                        </ul>
+                                        <LogoFlexContainer>
+                                            <Logo name="HTML5">
+                                                <i className="devicon-html5-plain"></i>
+                                            </Logo>
+                                            <Logo name="CSS3">
+                                                <i className="devicon-css3-plain"></i>
+                                            </Logo>
+                                            <Logo name="Javascript">
+                                                <i className="devicon-javascript-plain"></i>
+                                            </Logo>
+                                            <Logo name="React">
+                                                <i className="devicon-react-original"></i>
+                                            </Logo>
+                                            <Logo name="Nextjs">
+                                                <i class="devicon-nextjs-original"></i>
+                                            </Logo>
+                                            <Logo name="Java">
+                                                <i className="devicon-java-plain"></i>
+                                            </Logo>
+                                            <Logo name="Spring">
+                                                <i className="devicon-spring-plain"></i>
+                                            </Logo>
+                                            <Logo name="Postgres">
+                                                <i className="devicon-postgresql-plain"></i>
+                                            </Logo>
+                                            <Logo name="Mysql">
+                                                <i className="devicon-mysql-plain"></i>
+                                            </Logo>
+                                            <Logo name="MongoDb">
+                                                <i className="devicon-mongodb-plain"></i>
+                                            </Logo>
+                                            <Logo name="Firebase">
+                                                <i className="devicon-firebase-plain"></i>
+                                            </Logo>
+                                            <Logo name="Git">
+                                                <i className="devicon-git-plain"></i>
+                                            </Logo>
+                                            <Logo name="GitHub">
+                                                <i className="devicon-github-original"></i>
+                                            </Logo>
+                                            <Logo name="Docker">
+                                                <i class="devicon-docker-plain"></i>
+                                            </Logo>
+                                        </LogoFlexContainer>
                                     </Typography>
                                 </Grid>
-                        )}
-                        {frameworks.length > 0 && (
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mx:{xl:3, lg:3}, mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
+                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{
+                                textAlign: 'center',
+                                background: '#555555',
+                                mx: {xl: 3, lg: 3},
+                                mt: {md: 4, xs: 4, sm: 4},
+                                pt: 2,
+                                pb: 2
+                            }}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Frameworks</Typography>
-                                    <ul style={{fontSize:20}}>
-                                        {frameworks.map((f, index) => (
-                                            <li key={index}>{f.name}</li>
-                                        ))}
-                                    </ul>
+                                    <LogoFlexContainer>
+                                        <Logo name="Material Ui">
+                                            <i className="devicon-materialui-plain"></i>
+                                        </Logo>
+                                    </LogoFlexContainer>
                                 </Typography>
                             </Grid>
-                        )}
-                        {tools.length > 0 && (
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
@@ -73,16 +113,20 @@ export function About(props) {
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Tools</Typography>
-                                    <ul style={{fontSize:20}}>
-                                        {tools.map((t, index) => (
-                                            <li key={index}>{t.name}</li>
-                                        ))}
-                                    </ul>
+                                    <LogoFlexContainer>
+                                        <Logo name="Intellij">
+                                            <i class="devicon-intellij-plain"></i>
+                                        </Logo>
+                                        <Logo name="Visual studio">
+                                            <i class="devicon-visualstudio-plain"></i>
+                                        </Logo>
+                                        <Logo name="Vscode">
+                                            <i class="devicon-vscode-plain"></i>
+                                        </Logo>
+                                    </LogoFlexContainer>
                                 </Typography>
                             </Grid>
-                        )}
                     </Grid>
-                    {interests.length > 0 && (
                         <Box>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
@@ -101,7 +145,6 @@ export function About(props) {
                             </Box>
 
                         </Box>
-                    )}
                 </Grid>
             </Grid>
         </>
