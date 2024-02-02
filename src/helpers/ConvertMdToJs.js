@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Box } from "@mui/material";
-import {ExtractTitleAndContent} from "./ExtractTitleAndContent";
+import {ExtractFrontmatter} from "./ExtractFrontmatter";
 
 export function ConvertMdToJs(props) {
     const { mdFilePath, className, display } = props;
@@ -11,7 +11,7 @@ export function ConvertMdToJs(props) {
         fetch(mdFilePath)
             .then((res) => res.text())
             .then((md) => {
-                const { title, content } = ExtractTitleAndContent(md);
+                const { title, content } = ExtractFrontmatter(md);
                 setReadable({ title, content });
             });
     }, [mdFilePath]);

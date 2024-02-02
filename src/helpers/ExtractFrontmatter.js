@@ -1,4 +1,4 @@
-export function ExtractTitleAndContent(md) {
+export function ExtractFrontmatter(md) {
     const startDelimiter = '---';
     const endDelimiter = '---';
 
