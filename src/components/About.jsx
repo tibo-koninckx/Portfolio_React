@@ -3,7 +3,7 @@ import {ConvertMdToJs} from "../helpers/ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
 import {Logo} from "./Logo";
-import {LogoFlexContainer} from "./LogoFlexContainer";
+import {FlexContainer} from "./FlexContainer";
 
 export function About() {
     return (
@@ -39,7 +39,7 @@ export function About() {
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center'
                                         }}>Full stack web development</Typography>
-                                        <LogoFlexContainer>
+                                        <FlexContainer>
                                             <Logo name="HTML5">
                                                 <i className="devicon-html5-plain"></i>
                                             </Logo>
@@ -82,7 +82,7 @@ export function About() {
                                             <Logo name="Docker">
                                                 <i class="devicon-docker-plain"></i>
                                             </Logo>
-                                        </LogoFlexContainer>
+                                        </FlexContainer>
                                     </Typography>
                                 </Grid>
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{
@@ -99,11 +99,11 @@ export function About() {
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Frameworks</Typography>
-                                    <LogoFlexContainer>
+                                    <FlexContainer>
                                         <Logo name="Material Ui">
                                             <i className="devicon-materialui-plain"></i>
                                         </Logo>
-                                    </LogoFlexContainer>
+                                    </FlexContainer>
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
@@ -113,7 +113,7 @@ export function About() {
                                         fontFamily: 'Nunito, sans-serif',
                                         textAlign: 'center'
                                     }}>Tools</Typography>
-                                    <LogoFlexContainer>
+                                    <FlexContainer>
                                         <Logo name="Intellij">
                                             <i class="devicon-intellij-plain"></i>
                                         </Logo>
@@ -123,7 +123,7 @@ export function About() {
                                         <Logo name="Vscode">
                                             <i class="devicon-vscode-plain"></i>
                                         </Logo>
-                                    </LogoFlexContainer>
+                                    </FlexContainer>
                                 </Typography>
                             </Grid>
                     </Grid>

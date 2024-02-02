@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 
-export function LogoFlexContainer(props) {
+export function FlexContainer(props) {
     const {children} = props;
     return <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flex-start'}}>
         {children}
