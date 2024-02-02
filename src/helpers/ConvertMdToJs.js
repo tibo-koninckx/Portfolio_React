@@ -5,14 +5,14 @@ import {ExtractFrontmatter} from "./ExtractFrontmatter";
 
 export function ConvertMdToJs(props) {
     const { mdFilePath, className, display } = props;
-    const [readable, setReadable] = useState({ title: "", content: "" });
+    const [readable, setReadable] = useState({ title: "", content: "" , description: "", date: ""});
 
     useEffect(() => {
         fetch(mdFilePath)
             .then((res) => res.text())
             .then((md) => {
-                const { title, content } = ExtractFrontmatter(md);
-                setReadable({ title, content });
+                const { title, content, description, date } = ExtractFrontmatter(md);
+                setReadable({ title, content, description, date });
             });
     }, [mdFilePath]);
 
@@ -31,6 +31,12 @@ export function ConvertMdToJs(props) {
             )}
             {display === "content" && (
                 <Markdown className={`content ${className}`} children={readable.content} components={components} />
+            )}
+            {display === "description" && (
+                <div className={`description ${className}`}>{readable.description}</div>
+            )}
+            {display === "date" && (
+                <div className={`date ${className}`}>{readable.date}</div>
             )}
         </Box>
     );
