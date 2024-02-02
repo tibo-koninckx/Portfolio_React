@@ -1,5 +1,5 @@
 import {Box, Grid, Typography} from "@mui/material";
-import {ConvertMdToJs} from "./ConvertMdToJs";
+import {ConvertMdToJs} from "../helpers/ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
 import {Logo} from "./Logo";
