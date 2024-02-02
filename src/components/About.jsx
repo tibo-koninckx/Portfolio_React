@@ -15,7 +15,7 @@ export function About() {
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
                                 textAlign: 'center'
-                            }}> <ConvertMdToJs mdFilePath={Biography} display="title" /></Typography>
+                            }}><ConvertMdToJs mdFilePath={Biography} display="title" /></Typography>
 
                             <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
                                 <Typography variant="body1"
