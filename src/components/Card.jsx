@@ -1,4 +1,6 @@
 import {Box, Button, Container, Typography} from "@mui/material";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons"
 
 export function Card(props) {
     const {title, description, url, date} = props;
@@ -10,7 +12,7 @@ export function Card(props) {
             <Typography sx={{fontFamily: 'Nunito, sans-serif'}} variant="body1" color="white">
                 {description}
             </Typography>
-            <Button size="small" href={url} target="_blank">Read More</Button>
+            <Button sx={{color: 'white'}} size="small" href={url} target="_blank">Read More <FontAwesomeIcon icon={faArrowRightLong} /></Button>
         </Container>
     </Box>
 }
