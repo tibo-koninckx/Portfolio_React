@@ -2,7 +2,6 @@ import {Grid} from "@mui/material";
 import {Card} from "./Card";
 import {ConvertMdToJs} from "../helpers/ConvertMdToJs";
 import {FlexContainer} from "./FlexContainer";
-import matter from "gray-matter";
 
 export function Project() {
     const context = require.context('../content/projects', false, /\.md$/);
@@ -14,7 +13,7 @@ export function Project() {
                 <FlexContainer>
                     {markdownFiles.map((project, index) => {
                         return (
-                            <Card key={index} title={<ConvertMdToJs mdFilePath={project} display="title" />} description={<ConvertMdToJs mdFilePath={project} display="description"/>} date={<ConvertMdToJs mdFilePath={project} display="date"/>} url={filleUrl[index]} />
+                            <Card key={index} title={<ConvertMdToJs mdFilePath={project} display="title" />} description={<ConvertMdToJs mdFilePath={project} display="description"/>} date={<ConvertMdToJs mdFilePath={project} display="date"/>} url={filleUrl[index]} fillepath={project}/>
                         );
                     })}
                 </FlexContainer>
