@@ -10,7 +10,7 @@ export function Card(props) {
             <Typography sx={{fontFamily: 'Nunito, sans-serif'}} gutterBottom variant="h5" component="div">
                 {title}
             </Typography>
-            <Typography sx={{fontFamily: 'Nunito, sans-serif'}} variant="body1" color="white">
+            <Typography className="no-first-letter" sx={{fontFamily: 'Nunito, sans-serif'}} variant="body1" color="white">
                 {description}
             </Typography>
             <Link to={`/projects/${url}`}>
