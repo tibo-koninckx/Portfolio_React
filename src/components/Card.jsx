@@ -1,6 +1,7 @@
 import {Box, Button, Container, Typography} from "@mui/material";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons"
+import {Link} from "react-router-dom";
 
 export function Card(props) {
     const {title, description, url, date} = props;
@@ -12,7 +13,9 @@ export function Card(props) {
             <Typography sx={{fontFamily: 'Nunito, sans-serif'}} variant="body1" color="white">
                 {description}
             </Typography>
-            <Button sx={{color: 'white'}} size="small" href={url} target="_blank">Read More <FontAwesomeIcon icon={faArrowRightLong} /></Button>
+            <Link to={`/projects/${url}`}>
+                <Button sx={{color: 'white'}} size="small" target="_blank">Read More <FontAwesomeIcon icon={faArrowRightLong} /></Button>
+            </Link>
         </Container>
     </Box>
 }
