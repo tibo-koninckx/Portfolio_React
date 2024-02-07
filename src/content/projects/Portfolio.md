@@ -5,6 +5,8 @@ date: Feb 5, 2023
 ---
 # Portfolio React
 
+[Github](https://github.com/tibo-koninckx/Portfolio_React)
+
 This portfolio is one of my projects that I am proud of. My portfolio is completely built with react. Both front-end and back-end.
 It contains an overview of my skills, my projects and a way to contact me. It offers a user-friendly interface that makes it easy to browse through my projects.
 
