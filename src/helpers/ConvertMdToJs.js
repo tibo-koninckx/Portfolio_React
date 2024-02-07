@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { Box } from "@mui/material";
+import {Box, Button} from "@mui/material";
 import matter from "gray-matter";
 import { Buffer } from 'buffer';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
 global.Buffer = Buffer;
 
 export function ConvertMdToJs(props) {
@@ -31,10 +33,21 @@ export function ConvertMdToJs(props) {
     }, [mdFilePath]);
 
     const components = {
-        a: ({ node, ...props }) => (
-            <a {...props} target="_blank" rel="noopener noreferrer">
+        a: ({ node, ...props }) => {
+            if (props.href && props.href.startsWith("https://github.com/")) {
+                return (
+                        <Button {...props} target="_blank" rel="noopener noreferrer" sx={{fontFamily: 'Nunito, sans-serif',color: 'white'}} size="large">{props.children} <FontAwesomeIcon icon={faArrowRightLong} /></Button>);
+            }
+            return (
+                <a {...props}>
+                    {props.children}
+                </a>
+            );
+        },
+        p: ({ node, ...props }) => (
+            <p {...props} className="no-first-letter">
                 {props.children}
-            </a>
+            </p>
         ),
     };
 
