@@ -53,7 +53,7 @@ export function About() {
                                                 <i className="devicon-react-original"></i>
                                             </Logo>
                                             <Logo name="Nextjs">
-                                                <i class="devicon-nextjs-original"></i>
+                                                <i className="devicon-nextjs-plain"></i>
                                             </Logo>
                                             <Logo name="Java">
                                                 <i className="devicon-java-plain"></i>
@@ -115,7 +115,7 @@ export function About() {
                                     }}>Tools</Typography>
                                     <FlexContainer>
                                         <Logo name="Intellij">
-                                            <i class="devicon-intellij-plain"></i>
+                                            <i className="devicon-intellij-plain"></i>
                                         </Logo>
                                         <Logo name="Visual studio">
                                             <i class="devicon-visualstudio-plain"></i>
