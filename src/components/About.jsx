@@ -103,6 +103,9 @@ export function About() {
                                         <Logo name="Material Ui">
                                             <i className="devicon-materialui-plain"></i>
                                         </Logo>
+                                        <Logo name="Ant design">
+                                            <i className="devicon-antdesign-plain"></i>
+                                        </Logo>
                                     </FlexContainer>
                                 </Typography>
                             </Grid>
