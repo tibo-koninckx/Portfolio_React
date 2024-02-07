@@ -32,7 +32,7 @@ export function About() {
                         textAlign: 'center'
                     }}>Skills</Typography>
                     <Grid container justifyContent="center">
-                                <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
+                                <Grid item xs={12} sm={12} md={12} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                     <Typography variant="body1" className="no-first-letter"
                                                 sx={{fontFamily: 'Nunito, sans-serif'}}>
                                         <Typography variant="h4" sx={{
@@ -85,7 +85,7 @@ export function About() {
                                         </FlexContainer>
                                     </Typography>
                                 </Grid>
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{
+                            <Grid item xs={12} sm={12} md={12} lg={3} sx={{
                                 textAlign: 'center',
                                 background: '#555555',
                                 mx: {xl: 3, lg: 3},
@@ -109,7 +109,7 @@ export function About() {
                                     </FlexContainer>
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={12} md={3} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
+                            <Grid item xs={12} sm={12} md={12} lg={3} sx={{textAlign: 'center', background: '#555555', mt:{md:4, xs:4, sm:4}, pt:2, pb:2}}>
                                 <Typography variant="body1" className="no-first-letter"
                                             sx={{fontFamily: 'Nunito, sans-serif'}}>
                                     <Typography variant="h4" sx={{
