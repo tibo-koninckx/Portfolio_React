@@ -8,8 +8,8 @@ import {
     ListItem,
     ListItemButton,
     ListItemIcon,
-    ListItemText,
-    Toolbar,
+    ListItemText, MenuItem,
+    Toolbar, Typography,
     useMediaQuery,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -63,68 +63,35 @@ export function Navbar() {
                         <div style={{ flexGrow: 1 }}></div>
                         {!isMobile && (
                             // Add this line to push menu items to the right
-                            <div>
-                                {/* Your desktop version content goes here */}
-                                <List sx={{display: 'flex'}}>
-                                    <ListItem onClick={handleDrawerClose}>
-                                        <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
-                                            <ListItemButton>
-                                                <NavbarHover>
-                                                    <ListItemText>
-                                                        Home
-                                                    </ListItemText>
-                                                </NavbarHover>
-                                            </ListItemButton>
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem onClick={handleDrawerClose}>
-                                        <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
-                                            <ListItemButton>
-                                                <NavbarHover>
-                                                    <ListItemText>
-                                                        About
-                                                    </ListItemText>
-                                                </NavbarHover>
-                                            </ListItemButton>
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem onClick={handleDrawerClose}>
-                                        <Link
-                                            to={url}
-                                            target="_blank" style={{textDecoration: "none", color: "inherit"}}>
-                                            <ListItemButton>
-                                                <NavbarHover>
-                                                    <ListItemText>
-                                                        CV
-                                                    </ListItemText>
-                                                </NavbarHover>
-                                            </ListItemButton>
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem onClick={handleDrawerClose}>
-                                        <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
-                                            <ListItemButton>
-                                                <NavbarHover>
-                                                    <ListItemText>
-                                                        Projects
-                                                    </ListItemText>
-                                                </NavbarHover>
-                                            </ListItemButton>
-                                        </Link>
-                                    </ListItem>
-                                    <ListItem onClick={handleDrawerClose}>
-                                        <Link to="/contact" style={{textDecoration: "none", color: "inherit"}}>
-                                            <ListItemButton>
-                                                <NavbarHover>
-                                                    <ListItemText>
-                                                        Contact
-                                                    </ListItemText>
-                                                </NavbarHover>
-                                            </ListItemButton>
-                                        </Link>
-                                    </ListItem>
-                                </List>
-                            </div>
+                            /*Your desktop version content goes here*/
+                            <Box style={{display: 'flex'}}>
+                                <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
+                                    <NavbarHover>
+                                        <MenuItem>Home</MenuItem>
+                                    </NavbarHover>
+                                </Link>
+                                <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
+                                    <NavbarHover>
+                                        <MenuItem>About</MenuItem>
+                                    </NavbarHover>
+                                </Link>
+                                <Link to={url}
+                                      target="_blank" style={{textDecoration: "none", color: "inherit"}}>
+                                    <NavbarHover>
+                                        <MenuItem>Cv</MenuItem>
+                                    </NavbarHover>
+                                </Link>
+                                <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
+                                    <NavbarHover>
+                                        <MenuItem>Projects</MenuItem>
+                                    </NavbarHover>
+                                </Link>
+                                <Link to="/contact" sx={{mr:5}} style={{textDecoration: "none", color: "inherit"}}>
+                                    <NavbarHover>
+                                        <MenuItem>Contact</MenuItem>
+                                    </NavbarHover>
+                                </Link>
+                            </Box>
                         )}
                     </Toolbar>
                 </AppBar>
