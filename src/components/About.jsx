@@ -4,6 +4,7 @@ import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
 import {Logo} from "./Logo";
 import {FlexContainer} from "./FlexContainer";
+import {CardBox} from "./cardBox";
 
 export function About() {
     return (
@@ -17,12 +18,12 @@ export function About() {
                                 textAlign: 'center'
                             }}><ConvertMdToJs mdFilePath={Biography} display="title" /></Typography>
 
-                            <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, pb:2, pt:2, marginTop: '2%'}}>
+                            <CardBox style={{marginTop: '2%'}}>
                                 <Typography variant="body1"
                                             sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', marginX: '25%', fontSize: 20}}>
                                     <ConvertMdToJs mdFilePath={Biography} display="content" />
                                 </Typography>
-                            </Box>
+                            </CardBox>
 
                         </Box>
 
@@ -130,14 +131,14 @@ export function About() {
                                 </Typography>
                             </Grid>
                     </Grid>
-                        <Box>
+                        <Box sx={{mb:5}}>
                             <Typography variant="h2" sx={{
                                 fontFamily: 'Nunito, sans-serif',
                                 marginTop: '2%',
                                 marginBottom:'2%',
                                 textAlign: 'center'
                             }}><ConvertMdToJs mdFilePath={PersonalInterests} display="title" /></Typography>
-                            <Box sx={{background: '#555555', marginLeft:{lg: '11%', xl:'11%', md:'11%'}, marginRight: {lg: '11%', xl:'11%', md:'11%'}, mb:5, pb:2, pt:2}}>
+                            <CardBox>
                                 <Typography variant="body1"
                                             sx={{
                                                 fontFamily: 'Nunito, sans-serif',
@@ -145,7 +146,7 @@ export function About() {
                                                 fontSize: 20,
                                                 marginX: '25%'
                                             }}><ConvertMdToJs mdFilePath={PersonalInterests} className="md-url" display="content" /></Typography>
-                            </Box>
+                            </CardBox>
 
                         </Box>
                 </Grid>
