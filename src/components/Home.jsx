@@ -46,12 +46,14 @@ export function Home() {
                     </Box>
                     <Box sx={{display: 'flex', justifyContent: 'center', mt: 4}}>
                         <motion.div whileHover={{scale: 1.2}}>
-                            <Link to="/about"><Button variant="contained" color="primary" sx={{mr: 4}} size="large">About
-                                me</Button></Link>
+                            <Button variant="contained" color="primary" sx={{mr: 4}} size="large">
+                                <Link className="no-style" to="/about">About me</Link>
+                            </Button>
                         </motion.div>
                         <motion.div whileHover={{scale: 1.2}}>
-                            <Link to="/projects"> <Button variant="contained" color="primary" href="/projects"
-                                                          size="large">My projects</Button></Link>
+                            <Button variant="contained" color="primary" size="large">
+                                <Link className="no-style" to="/projects">My projects</Link>
+                            </Button>
                         </motion.div>
                     </Box>
                 </Container>
