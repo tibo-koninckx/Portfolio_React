@@ -1,11 +1,10 @@
 import {Project} from "../components/Project";
 import {PageAnimation} from "../components/PageAnimation";
 
-export function ProjectPage(props) {
-    const {projects} = props;
+export function ProjectPage() {
     return <>
         <PageAnimation>
-            <Project projects={projects}/>
+            <Project/>
         </PageAnimation>
     </>
 }
