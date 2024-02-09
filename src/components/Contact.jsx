@@ -174,11 +174,11 @@ export function Contact() {
                 </Box>
             </Box>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', cursor: 'pointer'}}>
                         <motion.div whileHover={{scale: 1.2}}>
                             <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
                         </motion.div>
-                        <motion.div whileHover={{scale: 1.2}}>
+                        <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
                             <Link className="no-style" to="https://github.com/tibo-koninckx" target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl" /></Link>
                         </motion.div>
                     </Box>
