@@ -59,48 +59,53 @@ export function Contact() {
             </Box>
             <Box>{!close && alert}</Box>
             <Box sx={{
-                mx:5,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexWrap: 'wrap'}}>
+                padding: '0 25% 0 25%'
+      }}>
                 <Grid>
-                    <Grid item xs={12} sm={6} md={8} lg={12} sx={{mt: 5}}>
-                        <TextField sx={{mr:2, '& label': {
-                                color: 'white',
-                            },     '& fieldset': {
-                                borderColor: 'white',
-                            },
-                            '& .MuiFilledInput-underline:before': {
-                                borderBottomColor: 'white !important',
-                            },
-                            '&:hover .MuiFilledInput-underline:before': {
-                                borderBottomColor: 'white !important',
-                            },
-                        }}
-                                   fullWidth
-                                   color="warning"
-                                   id="FirstName"
-                                   label="FirstName"
-                                   variant="filled"
-                                   margin="normal"
-                                   name="firstName"
-                                   onChange={handleInputChange}
-                                   required
+                    <Grid item xs={12} sm={6} md={6} lg={6} sx={{mt: 5}}>
+                        <TextField
+                            sx={{
+                                mr: 2,
+                                width: 'calc(50% - 16px)',
+                                '& label': {
+                                    color: 'white',
+                                },
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '& .MuiFilledInput-underline:before': {
+                                    borderBottomColor: 'white !important',
+                                },
+                                '&:hover .MuiFilledInput-underline:before': {
+                                    borderBottomColor: 'white !important',
+                                },
+                            }}
+                            color="warning"
+                            id="FirstName"
+                            label="FirstName"
+                            variant="filled"
+                            margin="normal"
+                            name="firstName"
+                            onChange={handleInputChange}
+                            required
                         />
 
-                        <TextField sx={{'& label': {
-                                color: 'white',
-                            },     '& fieldset': {
-                                borderColor: 'white',
-                            },
-                            '& .MuiFilledInput-underline:before': {
-                                borderBottomColor: 'white !important',
-                            },
-                            '&:hover .MuiFilledInput-underline:before': {
-                                borderBottomColor: 'white !important',
-                            },
-                        }} fullWidth
+                        <TextField
+                            sx={{
+                                width: 'calc(50% - 16px)',
+                                '& label': {
+                                    color: 'white',
+                                },
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '& .MuiFilledInput-underline:before': {
+                                    borderBottomColor: 'white !important',
+                                },
+                                '&:hover .MuiFilledInput-underline:before': {
+                                    borderBottomColor: 'white !important',
+                                },
+                            }}
                             color="warning"
                             id="LastName"
                             label="LastName"
@@ -111,6 +116,7 @@ export function Contact() {
                             required
                         />
                     </Grid>
+
                     <Grid item xs={12} sm={6} md={8} lg={12}>
                         <TextField sx={{'& label': {
                                 color: 'white',
