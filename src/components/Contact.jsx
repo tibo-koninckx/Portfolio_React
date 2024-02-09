@@ -66,7 +66,7 @@ export function Contact() {
             <Box sx={{
                 padding: {lg: '0 25% 0 25%', md: '0 10% 0 10%', sm: '0 10% 0 10%', xs: '0 10% 0 10%'}
             }}>
-                <Box>
+                <Box sx={{ input: { color: 'white' } }}>
                     <Grid item xs={12} sm={6} md={6} lg={6} sx={{mt: 5}}>
                         <TextField
                             sx={{
@@ -83,7 +83,7 @@ export function Contact() {
                                 },
                                 '&:hover .MuiFilledInput-underline:before': {
                                     borderBottomColor: 'white !important',
-                                },
+                                }
                             }}
                             color="warning"
                             id="FirstName"
