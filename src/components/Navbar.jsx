@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
-    AppBar, Box,
-    Button,
+    AppBar,
+    Box,
     Drawer,
     IconButton,
     List,
     ListItem,
     ListItemButton,
     ListItemIcon,
-    ListItemText, MenuItem,
-    Toolbar, Typography,
+    ListItemText,
+    MenuItem,
+    Toolbar,
     useMediaQuery,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import { storage } from "../services/firebase";
-import { ref, getDownloadURL } from "firebase/storage";
-import { motion } from "framer-motion";
+import {Link} from "react-router-dom";
+import {storage} from "../services/firebase";
+import {getDownloadURL, ref} from "firebase/storage";
+import {motion} from "framer-motion";
 import {NavbarHover} from "./NavbarHover";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faHouse, faBriefcase, faAddressCard, faFile, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faAddressCard, faBars, faBriefcase, faFile, faHouse, faUser} from "@fortawesome/free-solid-svg-icons";
 
 export function Navbar() {
     const [url, setUrl] = useState(null);
@@ -55,12 +56,12 @@ export function Navbar() {
                                 color="inherit"
                                 aria-label="menu"
                                 onClick={handleDrawerOpen}
-                                sx={{ mr: 2, display: { xs: "block", md: "none" } }}
+                                sx={{mr: 2, display: {xs: "block", md: "none"}}}
                             >
-                                <FontAwesomeIcon icon={faBars} />
+                                <FontAwesomeIcon icon={faBars}/>
                             </IconButton>
                         )}
-                        <div style={{ flexGrow: 1 }}></div>
+                        <div style={{flexGrow: 1}}></div>
                         {!isMobile && (
                             // Add this line to push menu items to the right
                             /*Your desktop version content goes here*/
@@ -86,7 +87,7 @@ export function Navbar() {
                                         <MenuItem>Projects</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link to="/contact" sx={{mr:5}} style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/contact" sx={{mr: 5}} style={{textDecoration: "none", color: "inherit"}}>
                                     <NavbarHover>
                                         <MenuItem>Contact</MenuItem>
                                     </NavbarHover>
@@ -102,9 +103,9 @@ export function Navbar() {
                     onClose={handleDrawerClose}
                 >
                     <motion.div
-                        initial={{ x: -500 }}
-                        animate={{ x: drawerOpen ? 0 : -500 }}
-                        transition={{ ease: "easeOut", duration: 0.5 }}
+                        initial={{x: -500}}
+                        animate={{x: drawerOpen ? 0 : -500}}
+                        transition={{ease: "easeOut", duration: 0.5}}
                     >
                         <List>
                             <ListItem onClick={handleDrawerClose}>
@@ -149,7 +150,7 @@ export function Navbar() {
                                 <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <FontAwesomeIcon icon={faBriefcase} />
+                                            <FontAwesomeIcon icon={faBriefcase}/>
                                         </ListItemIcon>
                                         <ListItemText>
                                             Projects

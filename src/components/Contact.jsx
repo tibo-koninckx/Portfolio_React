@@ -1,4 +1,4 @@
-import {Alert, Box, Button, Divider, Grid, TextField, Typography} from "@mui/material";
+import {Alert, Box, Button, Grid, TextField, Typography} from "@mui/material";
 import {useState} from "react";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
@@ -39,9 +39,12 @@ export function Contact() {
             .then(
                 (result) => {
                     setMessage("Email succesfully send!");
-                    setAlert(<Alert onClose={() => {setClose(true); clearMessage();}} severity="success">{message}</Alert>);
+                    setAlert(<Alert onClose={() => {
+                        setClose(true);
+                        clearMessage();
+                    }} severity="success">{message}</Alert>);
 
-                    },
+                },
                 (error) => {
                     setMessage("Sending mail failed, please try again later!");
                     setAlert(<Alert onClose={() => setClose(true)} severity="error">{message}</Alert>);
@@ -50,17 +53,19 @@ export function Contact() {
 
         e.target.reset();
     }
+
     return <>
         <Box component="form" onSubmit={sendEmail} autoComplete="off">
             <Box>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
                     Me</Typography>
-                <Typography variant="body1" sx={{textAlign: 'center', fontFamily: 'Nunito, sans-serif'}} className="no-first-letter">Let's connect</Typography>
+                <Typography variant="body1" sx={{textAlign: 'center', fontFamily: 'Nunito, sans-serif'}}
+                            className="no-first-letter">Let's connect</Typography>
             </Box>
             <Box>{!close && alert}</Box>
             <Box sx={{
                 padding: {lg: '0 25% 0 25%', md: '0 10% 0 10%', sm: '0 10% 0 10%', xs: '0 10% 0 10%'}
-      }}>
+            }}>
                 <Box>
                     <Grid item xs={12} sm={6} md={6} lg={6} sx={{mt: 5}}>
                         <TextField
@@ -118,9 +123,10 @@ export function Contact() {
                     </Grid>
 
                     <Grid item xs={12} sm={6} md={8} lg={12}>
-                        <TextField sx={{'& label': {
+                        <TextField sx={{
+                            '& label': {
                                 color: 'white',
-                            },     '& fieldset': {
+                            }, '& fieldset': {
                                 borderColor: 'white',
                             },
                             '& .MuiFilledInput-underline:before': {
@@ -131,14 +137,14 @@ export function Contact() {
                             },
                         }}
                                    fullWidth
-                            color="warning"
-                            id="email"
-                            label="email"
-                            variant="filled"
-                            margin="normal"
-                            name="email"
-                            onChange={handleInputChange}
-                            required
+                                   color="warning"
+                                   id="email"
+                                   label="email"
+                                   variant="filled"
+                                   margin="normal"
+                                   name="email"
+                                   onChange={handleInputChange}
+                                   required
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -155,15 +161,15 @@ export function Contact() {
                             },
                         }}
                                    fullWidth
-                            color="warning"
-                            id="message"
-                            label="Message"
-                            variant="filled"
-                            margin="normal"
-                            name="message"
-                            onChange={handleInputChange}
-                            multiline
-                            rows={4}
+                                   color="warning"
+                                   id="message"
+                                   label="Message"
+                                   variant="filled"
+                                   margin="normal"
+                                   name="message"
+                                   onChange={handleInputChange}
+                                   multiline
+                                   rows={4}
                         />
                         <Box>
                             <Grid>
@@ -173,16 +179,18 @@ export function Contact() {
                     </Grid>
                 </Box>
             </Box>
-                <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', cursor: 'pointer'}}>
-                        <motion.div whileHover={{scale: 1.2}}>
-                            <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
-                        </motion.div>
-                        <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
-                            <Link className="no-style" to="https://github.com/tibo-koninckx" target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl" /></Link>
-                        </motion.div>
-                    </Box>
-                </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Box sx={{display: 'flex', justifyContent: 'center', cursor: 'pointer'}}>
+                    <motion.div whileHover={{scale: 1.2}}>
+                        <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx"
+                              target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
+                    </motion.div>
+                    <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
+                        <Link className="no-style" to="https://github.com/tibo-koninckx"
+                              target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl"/></Link>
+                    </motion.div>
+                </Box>
+            </Grid>
 
         </Box>
     </>

@@ -4,7 +4,7 @@ import {PageAnimation} from "../components/PageAnimation";
 export function AboutPage() {
     return <>
         <PageAnimation>
-            <About />
+            <About/>
         </PageAnimation>
     </>
 }

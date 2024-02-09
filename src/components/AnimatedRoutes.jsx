@@ -13,7 +13,7 @@ export function AnimatedRoutes() {
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
                 <Route index path={"/"} element={<HomePage/>}/>
-                <Route path={"/about"} element={<AboutPage />}/>
+                <Route path={"/about"} element={<AboutPage/>}/>
                 <Route path={"/contact"} element={<ContactPage/>}/>
                 <Route path={"/projects"} element={<ProjectPage/>}/>
                 <Route path={"/projects/:slug"} element={<ProjectArticle/>}/>

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Markdown from "react-markdown";
 import {Box, Button} from "@mui/material";
 import matter from "gray-matter";
-import { Buffer } from 'buffer';
+import {Buffer} from 'buffer';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
+
 global.Buffer = Buffer;
 
 export function ConvertMdToJs(props) {
-    const { mdFilePath, className, display } = props;
+    const {mdFilePath, className, display} = props;
     const [readable, setReadable] = useState({
         title: "",
         content: "",
@@ -20,8 +21,8 @@ export function ConvertMdToJs(props) {
         fetch(mdFilePath)
             .then((res) => res.text())
             .then((md) => {
-                const { data, content } = matter(md);
-                const { title, description, date } = data;
+                const {data, content} = matter(md);
+                const {title, description, date} = data;
 
                 setReadable({
                     title: title || "",
@@ -33,10 +34,12 @@ export function ConvertMdToJs(props) {
     }, [mdFilePath]);
 
     const components = {
-        a: ({ node, ...props }) => {
+        a: ({node, ...props}) => {
             if (props.href && props.href.startsWith("https://github.com/")) {
                 return (
-                        <Button {...props} target="_blank" rel="noopener noreferrer" sx={{fontFamily: 'Nunito, sans-serif',color: 'white'}} size="large">{props.children} <FontAwesomeIcon icon={faArrowRightLong} /></Button>);
+                    <Button {...props} target="_blank" rel="noopener noreferrer"
+                            sx={{fontFamily: 'Nunito, sans-serif', color: 'white'}} size="large">{props.children}
+                        <FontAwesomeIcon icon={faArrowRightLong}/></Button>);
             }
             return (
                 <a {...props}>
@@ -44,7 +47,7 @@ export function ConvertMdToJs(props) {
                 </a>
             );
         },
-        p: ({ node, ...props }) => (
+        p: ({node, ...props}) => (
             <p {...props} className="no-first-letter">
                 {props.children}
             </p>

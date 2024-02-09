@@ -13,7 +13,10 @@ export function Project() {
                 <FlexContainer>
                     {markdownFiles.map((project, index) => {
                         return (
-                            <Card key={index} title={<ConvertMdToJs mdFilePath={project} display="title" />} description={<ConvertMdToJs mdFilePath={project} display="description"/>} date={<ConvertMdToJs mdFilePath={project} display="date"/>} url={filleUrl[index]} fillepath={project}/>
+                            <Card key={index} title={<ConvertMdToJs mdFilePath={project} display="title"/>}
+                                  description={<ConvertMdToJs mdFilePath={project} display="description"/>}
+                                  date={<ConvertMdToJs mdFilePath={project} display="date"/>} url={filleUrl[index]}
+                                  fillepath={project}/>
                         );
                     })}
                 </FlexContainer>

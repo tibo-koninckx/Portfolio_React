@@ -6,12 +6,12 @@ export function NavbarHover(props) {
     const {children} = props
     const theme = useTheme();
     return <>
-    <motion.div whileHover={{
-        textDecoration: 'underline',
-        textDecorationColor: theme.palette.success.light,
-        textDecorationThickness: '40%'
-    }}>
-        {children}
-    </motion.div>
-</>
+        <motion.div whileHover={{
+            textDecoration: 'underline',
+            textDecorationColor: theme.palette.success.light,
+            textDecorationThickness: '40%'
+        }}>
+            {children}
+        </motion.div>
+    </>
 }
