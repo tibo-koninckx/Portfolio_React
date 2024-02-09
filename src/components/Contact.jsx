@@ -59,9 +59,9 @@ export function Contact() {
             </Box>
             <Box>{!close && alert}</Box>
             <Box sx={{
-                padding: '0 25% 0 25%'
+                padding: {lg: '0 25% 0 25%', md: '0 10% 0 10%', sm: '0 10% 0 10%', xs: '0 10% 0 10%'}
       }}>
-                <Grid>
+                <Box>
                     <Grid item xs={12} sm={6} md={6} lg={6} sx={{mt: 5}}>
                         <TextField
                             sx={{
@@ -171,7 +171,7 @@ export function Contact() {
                             </Grid>
                         </Box>
                     </Grid>
-                </Grid>
+                </Box>
             </Box>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
