@@ -51,9 +51,7 @@ export function Contact() {
         e.target.reset();
     }
     return <>
-        <Box component="form" onSubmit={sendEmail} autoComplete="off" sx={{
-            '& .MuiTextField-root': {m: 1, width: {lg: '50ch', md: '100%', sm: '100%', xs: '100%'}}
-        }}>
+        <Box component="form" onSubmit={sendEmail} autoComplete="off">
             <Box>
                 <Typography variant="h2" sx={{fontFamily: 'Nunito, sans-serif', textAlign: 'center', pt: 2}}>Contact
                     Me</Typography>
@@ -80,6 +78,7 @@ export function Contact() {
                                 borderBottomColor: 'white !important',
                             },
                         }}
+                                   fullWidth
                                    color="warning"
                                    id="FirstName"
                                    label="FirstName"
@@ -101,7 +100,7 @@ export function Contact() {
                             '&:hover .MuiFilledInput-underline:before': {
                                 borderBottomColor: 'white !important',
                             },
-                        }}
+                        }} fullWidth
                             color="warning"
                             id="LastName"
                             label="LastName"
@@ -125,6 +124,7 @@ export function Contact() {
                                 borderBottomColor: 'white !important',
                             },
                         }}
+                                   fullWidth
                             color="warning"
                             id="email"
                             label="email"
@@ -148,6 +148,7 @@ export function Contact() {
                                 borderBottomColor: 'white !important',
                             },
                         }}
+                                   fullWidth
                             color="warning"
                             id="message"
                             label="Message"
