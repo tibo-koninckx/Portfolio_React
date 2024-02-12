@@ -1,5 +1,5 @@
 ---
-title: portfolio
+title: Portfolio
 description: Discover my extensive Portfolio with projects, my CV, and information about myself
 date: Feb 5, 2023
 ---
