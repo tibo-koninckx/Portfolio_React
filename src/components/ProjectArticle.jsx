@@ -18,7 +18,7 @@ export function ProjectArticle(props) {
                     mt: 5,
                     fontSize:20
                 }}>
-                    <Box sx={{mx:5}}>
+                    <Box sx={{mx:3}}>
                         <ConvertMdToJs mdFilePath={location.state} display="content"/>
                     </Box>
                 </Box>
