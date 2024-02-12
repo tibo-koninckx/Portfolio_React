@@ -18,7 +18,9 @@ export function ProjectArticle(props) {
                     mt: 5,
                     fontSize:20
                 }}>
-                    <ConvertMdToJs mdFilePath={location.state} display="content"/>
+                    <Box sx={{mx:5}}>
+                        <ConvertMdToJs mdFilePath={location.state} display="content"/>
+                    </Box>
                 </Box>
             </Grid>
         </Grid>
