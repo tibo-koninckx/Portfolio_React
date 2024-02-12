@@ -15,7 +15,8 @@ export function ProjectArticle(props) {
                     marginRight: {lg: '11%', xl: '11%', md: '11%'},
                     pb: 2,
                     pt: 2,
-                    mt: 5
+                    mt: 5,
+                    fontSize:20
                 }}>
                     <ConvertMdToJs mdFilePath={location.state} display="content"/>
                 </Box>
