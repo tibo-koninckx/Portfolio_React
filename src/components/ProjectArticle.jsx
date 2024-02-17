@@ -4,7 +4,6 @@ import {Box, Grid} from "@mui/material";
 
 export function ProjectArticle(props) {
     const location = useLocation();
-    console.log(location.state);
     return <>
         <Grid container>
             <Grid item xs={12} sm={12} lg={12}>
