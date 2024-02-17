@@ -148,7 +148,8 @@ export function Contact() {
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <TextField sx={{
+                        <TextField inputProps={{ style: { color: "white" } }}
+                                   sx={{
                             mr: 2,
                             '& label': {
                                 color: 'white',
