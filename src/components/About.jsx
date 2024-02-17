@@ -19,7 +19,7 @@ export function About() {
                         }}><ConvertMdToJs mdFilePath={Biography} display="title"/></Typography>
 
                         <CardBox style={{marginTop: '2%'}}>
-                            <Typography variant="body1"
+                            <Typography variant="div"
                                         sx={{
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center',
