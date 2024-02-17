@@ -45,7 +45,7 @@ export function About() {
                             pt: 2,
                             pb: 2
                         }}>
-                            <Typography variant="body1" className="no-first-letter"
+                            <Typography variant="div" className="no-first-letter"
                                         sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
@@ -105,7 +105,7 @@ export function About() {
                             pt: 2,
                             pb: 2
                         }}>
-                            <Typography variant="body1" className="no-first-letter"
+                            <Typography variant="div" className="no-first-letter"
                                         sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
@@ -128,7 +128,7 @@ export function About() {
                             pt: 2,
                             pb: 2
                         }}>
-                            <Typography variant="body1" className="no-first-letter"
+                            <Typography variant="div" className="no-first-letter"
                                         sx={{fontFamily: 'Nunito, sans-serif'}}>
                                 <Typography variant="h4" sx={{
                                     fontFamily: 'Nunito, sans-serif',
@@ -139,10 +139,10 @@ export function About() {
                                         <i className="devicon-intellij-plain"></i>
                                     </Logo>
                                     <Logo name="Visual studio">
-                                        <i class="devicon-visualstudio-plain"></i>
+                                        <i className="devicon-visualstudio-plain"></i>
                                     </Logo>
                                     <Logo name="Vscode">
-                                        <i class="devicon-vscode-plain"></i>
+                                        <i className="devicon-vscode-plain"></i>
                                     </Logo>
                                 </FlexContainer>
                             </Typography>
@@ -156,7 +156,7 @@ export function About() {
                             textAlign: 'center'
                         }}><ConvertMdToJs mdFilePath={PersonalInterests} display="title"/></Typography>
                         <CardBox>
-                            <Typography variant="body1"
+                            <Typography variant="div"
                                         sx={{
                                             fontFamily: 'Nunito, sans-serif',
                                             textAlign: 'center',
