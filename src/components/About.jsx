@@ -92,7 +92,7 @@ export function About() {
                                         <i className="devicon-github-original"></i>
                                     </Logo>
                                     <Logo name="Docker">
-                                        <i class="devicon-docker-plain"></i>
+                                        <i className="devicon-docker-plain"></i>
                                     </Logo>
                                 </FlexContainer>
                             </Typography>
