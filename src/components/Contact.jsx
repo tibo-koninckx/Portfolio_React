@@ -1,5 +1,5 @@
 import {Alert, Box, Button, Grid, TextField, Typography} from "@mui/material";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
 import {motion} from "framer-motion";
@@ -39,20 +39,28 @@ export function Contact() {
             .then(
                 (result) => {
                     setMessage("Email succesfully send!");
-                    setAlert(<Alert onClose={() => {
-                        setClose(true);
-                        clearMessage();
-                    }} severity="success">{message}</Alert>);
 
                 },
                 (error) => {
                     setMessage("Sending mail failed, please try again later!");
-                    setAlert(<Alert onClose={() => setClose(true)} severity="error">{message}</Alert>);
                 }
-            );
-
-        e.target.reset();
+            ).finally(() => {
+            e.target.reset();
+        });
     }
+
+    useEffect(() => {
+        if (message) {
+            setAlert(
+                <Alert onClose={() => {
+                    setClose(true);
+                    clearMessage();
+                }} severity={message.includes('succesfully') ? "success" : "error"}>
+                    {message}
+                </Alert>
+            );
+        }
+    }, [message]);
 
     return <>
         <Box component="form" onSubmit={sendEmail} autoComplete="off">
@@ -62,7 +70,7 @@ export function Contact() {
                 <Typography variant="body1" sx={{textAlign: 'center', fontFamily: 'Nunito, sans-serif'}}
                             className="no-first-letter">Let's connect</Typography>
             </Box>
-            <Box>{!close && alert}</Box>
+            <Box sx={{mt:2, mx:{xs:5}, marginLeft:{lg: '20%', md: '20%', sm: '20%'}, marginRight:{lg: '20%', md: '20%', sm: '20%'}}}>{!close && alert}</Box>
             <Box sx={{
                 padding: {lg: '0 25% 0 25%', md: '0 10% 0 10%', sm: '0 10% 0 10%', xs: '0 10% 0 10%'}
             }}>
