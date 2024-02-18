@@ -4,7 +4,7 @@ import Biography from "../content/about/Biography.md";
 import PersonalInterests from "../content/about/Personal-interests.md"
 import {Logo} from "./Logo";
 import {FlexContainer} from "./FlexContainer";
-import {CardBox} from "./cardBox";
+import {CardBox} from "./CardBox";
 
 export function About() {
     return (
