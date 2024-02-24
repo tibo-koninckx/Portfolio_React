@@ -66,28 +66,28 @@ export function Navbar() {
                             // Add this line to push menu items to the right
                             /*Your desktop version content goes here*/
                             <Box style={{display: 'flex'}}>
-                                <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to home page">
                                     <NavbarHover>
                                         <MenuItem>Home</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/about" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to about page, more info about me">
                                     <NavbarHover>
                                         <MenuItem>About</MenuItem>
                                     </NavbarHover>
                                 </Link>
                                 <Link to={url}
-                                      target="_blank" style={{textDecoration: "none", color: "inherit"}}>
+                                      target="_blank" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to my cv">
                                     <NavbarHover>
                                         <MenuItem>Cv</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/projects" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect tp project page a list with all my projects">
                                     <NavbarHover>
                                         <MenuItem>Projects</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link to="/contact" sx={{mr: 5}} style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/contact" sx={{mr: 5}} style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to contactpage to contact me with a contact form">
                                     <NavbarHover>
                                         <MenuItem>Contact</MenuItem>
                                     </NavbarHover>
@@ -109,7 +109,7 @@ export function Navbar() {
                     >
                         <List>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link to="/" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to home page">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faHouse} size="lg"/>
@@ -121,7 +121,7 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link to="/about" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/about" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to about page, more info about me">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faUser} size="lg"/>
@@ -135,7 +135,7 @@ export function Navbar() {
                             <ListItem onClick={handleDrawerClose}>
                                 <Link
                                     to={url}
-                                    target="_blank" style={{textDecoration: "none", color: "inherit"}}>
+                                    target="_blank" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to my cv">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faFile} size="lg"/>
@@ -147,7 +147,7 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link to="/projects" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/projects" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect tp project page a list with all my projects">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faBriefcase}/>
@@ -159,7 +159,7 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link to="/contact" style={{textDecoration: "none", color: "inherit"}}>
+                                <Link to="/contact" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to contactpage to contact me with a contact form">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faAddressCard} size="lg"/>
