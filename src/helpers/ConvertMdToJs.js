@@ -42,7 +42,7 @@ export function ConvertMdToJs(props) {
                         <FontAwesomeIcon icon={faArrowRightLong}/></Button>);
             }
             return (
-                <a {...props} style={{color: 'white'}}>
+                <a {...props} target="_blank" rel="noopener noreferrer" style={{color: 'white'}}>
                     {props.children}
                 </a>
             );
