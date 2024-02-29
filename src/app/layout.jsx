@@ -4,6 +4,32 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+    tsParticles.load({
+        id: "tsparticles",
+        options: {
+            preset: "triangles",
+            background: {
+                opacity: 0
+            },
+            particles: {
+                move: {
+                    speed: 2
+                },
+            },
+            responsive: [
+                {
+                    options: {
+                        particles: {
+                            number: {
+                                value: 50
+                            },
+                        },
+                    },
+                    maxWidth: 800
+                },
+            ]
+        },
+    });
     return <>
         <html lang="en">
         <head>
