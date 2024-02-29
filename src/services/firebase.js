@@ -2,7 +2,7 @@ import {initializeApp} from "firebase/app";
 import {getStorage} from "firebase/storage";
 
 const firebaseConfig = {
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
 };
 
 const app = initializeApp(firebaseConfig);
