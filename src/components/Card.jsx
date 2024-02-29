@@ -1,3 +1,4 @@
+"use client"
 import {Box, Button, Container, Typography} from "@mui/material";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons"

@@ -1,3 +1,4 @@
+"use client"
 import {Alert, Box, Button, Grid, TextField, Typography} from "@mui/material";
 import {useEffect, useState} from "react";
 import * as emailjs from "@emailjs/browser";

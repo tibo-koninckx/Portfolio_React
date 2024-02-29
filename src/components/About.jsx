@@ -1,3 +1,4 @@
+"use client"
 import {Box, Grid, Typography} from "@mui/material";
 import {ConvertMdToJs} from "../helpers/ConvertMdToJs";
 import Biography from "../content/about/Biography.md";
