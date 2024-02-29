@@ -1,12 +1,11 @@
 "use client"
 import {Box, Button, Container, Grid, Typography} from "@mui/material";
-import {motion} from "framer-motion"
-import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 export function Home() {
-    return <>
+    return (
         <Grid>
             <Grid item xs={12} sm={12} md={8} lg={8}>
                 <Container style={{textAlign: 'center'}}>
@@ -36,29 +35,29 @@ export function Home() {
                     }}>+32 486 54 45 01</Typography>
                     <Box sx={{display: 'flex', justifyContent: 'center'}}>
                         <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
-                            <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx"
-                                  target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
+                            <a className="no-style" href="https://www.linkedin.com/in/tibokoninckx"
+                               target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></a>
                         </motion.div>
                         <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
-                            <Link className="no-style" to="https://github.com/tibo-koninckx"
-                                  target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub}
-                                                                   size="2xl"/></Link>
+                            <a className="no-style" href="https://github.com/tibo-koninckx"
+                               target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub}
+                                                                size="2xl"/></a>
                         </motion.div>
                     </Box>
                     <Box sx={{display: 'flex', justifyContent: 'center', mt: 4}}>
                         <motion.div whileHover={{scale: 1.2}}>
                             <Button variant="contained" color="primary" sx={{mr: 4}} size="large">
-                                <Link className="no-style" to="/about">About me</Link>
+                                <a className="no-style" href="/about">About me</a>
                             </Button>
                         </motion.div>
                         <motion.div whileHover={{scale: 1.2}}>
                             <Button variant="contained" color="primary" size="large">
-                                <Link className="no-style" to="/projects">My projects</Link>
+                                <a className="no-style" href="/projects">My projects</a>
                             </Button>
                         </motion.div>
                     </Box>
                 </Container>
             </Grid>
         </Grid>
-    </>
+    );
 }
