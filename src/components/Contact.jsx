@@ -1,12 +1,13 @@
-"use client"
+"use client";
 import {Alert, Box, Button, Grid, TextField, Typography} from "@mui/material";
-import {useEffect, useState} from "react";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
 import {motion} from "framer-motion";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import React, {useEffect, useState} from 'react';
+
 
 export function Contact() {
     const [formData, setFormData] = useState({

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {useLocation} from "react-router-dom";
 import {ConvertMdToJs} from "../helpers/ConvertMdToJs";
 import {Box, Grid} from "@mui/material";

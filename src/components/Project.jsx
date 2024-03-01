@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {Grid} from "@mui/material";
 import {Card} from "./Card";
 import {ConvertMdToJs} from "../helpers/ConvertMdToJs";

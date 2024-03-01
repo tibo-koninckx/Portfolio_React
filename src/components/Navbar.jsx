@@ -1,5 +1,4 @@
-"use client"
-import {useState} from "react";
+"use client";
 import {
     AppBar,
     Box,
@@ -14,13 +13,14 @@ import {
     Toolbar,
     useMediaQuery,
 } from "@mui/material";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 import {storage} from "../services/firebase";
 import {getDownloadURL, ref} from "firebase/storage";
 import {motion} from "framer-motion";
 import {NavbarHover} from "./NavbarHover";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAddressCard, faBars, faBriefcase, faFile, faHouse, faUser} from "@fortawesome/free-solid-svg-icons";
+import React ,{useState} from "react";
 
 export function Navbar() {
     const [url, setUrl] = useState(null);

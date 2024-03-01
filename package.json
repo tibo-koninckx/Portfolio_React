@@ -17,6 +17,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "buffer": "^6.0.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
     "firebase": "^10.7.1",
     "framer-motion": "^11.0.8",
     "gray-matter": "^4.0.0",
@@ -24,20 +26,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.21.0",
-    "styled-components": "^6.1.1",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^6.1.1"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "next start",
+    "lint": "next lint"
   },
   "browserslist": {
     "production": [

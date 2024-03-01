@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import {Box, Button, Container, Typography} from "@mui/material";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons"
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
 export function Card(props) {
     const {title, description, url, date, fillepath} = props;
