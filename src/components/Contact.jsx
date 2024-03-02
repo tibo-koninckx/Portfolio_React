@@ -3,7 +3,7 @@ import {Alert, Box, Button, Grid, TextField, Typography} from "@mui/material";
 import * as emailjs from "@emailjs/browser";
 import {useMessageContext} from "../contexts/messageContext";
 import {motion} from "framer-motion";
-import Link from "next/link";
+import Link from 'next/link'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import React, {useEffect, useState} from 'react';
@@ -193,11 +193,11 @@ export function Contact() {
             <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Box sx={{display: 'flex', justifyContent: 'center', cursor: 'pointer'}}>
                     <motion.div whileHover={{scale: 1.2}}>
-                        <Link className="no-style" to="https://www.linkedin.com/in/tibokoninckx"
+                        <Link className="no-style" href="https://www.linkedin.com/in/tibokoninckx"
                               target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2xl"/></Link>
                     </motion.div>
                     <motion.div whileHover={{scale: 1.2, cursor: 'pointer'}}>
-                        <Link className="no-style" to="https://github.com/tibo-koninckx"
+                        <Link className="no-style" href="https://github.com/tibo-koninckx"
                               target="_blank"><FontAwesomeIcon style={{marginLeft: '50%'}} icon={faGithub} size="2xl"/></Link>
                     </motion.div>
                 </Box>

@@ -2,7 +2,7 @@
 import {Box, Button, Container, Typography} from "@mui/material";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons"
-import Link from "next/link";
+import Link from 'next/link'
 
 export function Card(props) {
     const {title, description, url, date, fillepath} = props;
@@ -19,7 +19,7 @@ export function Card(props) {
                         color="white">
                 {description}
             </Typography>
-            <Link to={`/projects/${url}`} state={fillepath}>
+            <Link href={`/projects/${url}`} state={fillepath}>
                 <Button sx={{color: 'white'}} size="small" target="_blank">Read More <FontAwesomeIcon
                     icon={faArrowRightLong}/></Button>
             </Link>

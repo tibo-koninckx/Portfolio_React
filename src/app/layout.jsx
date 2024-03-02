@@ -1,4 +1,5 @@
 import {Navbar} from "../components/Navbar";
+import "../App.css";
 
 export const metadata = {
     title: "Portfolio Tibo Koninckx",
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
         </head>
         <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"><Navbar/> {children}</div>
+        <div id="root"><Navbar/>{children}</div>
         <script
             src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-triangles@3/tsparticles.preset.triangles.bundle.min.js"></script>
         </body>
