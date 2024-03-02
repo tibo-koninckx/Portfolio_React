@@ -1,3 +1,4 @@
+"use client"
 import React, {useEffect, useState} from "react";
 import Markdown from "react-markdown";
 import {Box, Button} from "@mui/material";
