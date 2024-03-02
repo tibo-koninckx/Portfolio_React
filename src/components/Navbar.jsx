@@ -18,9 +18,13 @@ import {motion} from "framer-motion";
 import {NavbarHover} from "./NavbarHover";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAddressCard, faBars, faBriefcase, faFile, faHouse, faUser} from "@fortawesome/free-solid-svg-icons";
-import React ,{useState} from "react";
+import React, {useState} from "react";
+import {getDownloadURL, ref} from "firebase/storage";
+import {storage} from "../services/firebase";
 
 export function Navbar() {
+    const [url, setUrl] = useState(null);
+    const cvRef = ref(storage, "cv/cv.pdf");
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -32,6 +36,15 @@ export function Navbar() {
     };
 
     const isMobile = useMediaQuery("(max-width:600px)");
+
+    getDownloadURL(cvRef)
+        .then((url) => {
+            setUrl(url);
+        })
+        .catch(() => {
+            setUrl(null);
+            console.error("Cv kan niet worden geladen");
+        });
 
     return (
         <>
@@ -54,28 +67,33 @@ export function Navbar() {
                             // Add this line to push menu items to the right
                             /*Your desktop version content goes here*/
                             <Box style={{display: 'flex'}}>
-                                <Link href="/" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to home page">
+                                <Link href="/" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to home page">
                                     <NavbarHover>
                                         <MenuItem>Home</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link href="/about" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to about page, more info about me">
+                                <Link href="/about" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to about page, more info about me">
                                     <NavbarHover>
                                         <MenuItem>About</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link href="https://firebasestorage.googleapis.com/v0/b/portfolio-a46c7.appspot.com/o/cv%2Fcv.pdf?alt=media&token=986e83df-676e-4dea-9206-52ba4df5a97e"
-                                      target="_blank" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to my cv">
+                                <Link href={url ? url : ''}
+                                      target="_blank" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to my cv">
                                     <NavbarHover>
                                         <MenuItem>Cv</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link href="/projects" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect tp project page a list with all my projects">
+                                <Link href="/projects" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect tp project page a list with all my projects">
                                     <NavbarHover>
                                         <MenuItem>Projects</MenuItem>
                                     </NavbarHover>
                                 </Link>
-                                <Link href="/contact" sx={{mr: 5}} style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to contactpage to contact me with a contact form">
+                                <Link href="/contact" sx={{mr: 5}} style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to contactpage to contact me with a contact form">
                                     <NavbarHover>
                                         <MenuItem>Contact</MenuItem>
                                     </NavbarHover>
@@ -97,7 +115,8 @@ export function Navbar() {
                     >
                         <List>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link href="/" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to home page">
+                                <Link href="/" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to home page">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faHouse} size="lg"/>
@@ -109,7 +128,8 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link href="/about" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to about page, more info about me">
+                                <Link href="/about" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to about page, more info about me">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faUser} size="lg"/>
@@ -121,8 +141,9 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link href="https://firebasestorage.googleapis.com/v0/b/portfolio-a46c7.appspot.com/o/cv%2Fcv.pdf?alt=media&token=986e83df-676e-4dea-9206-52ba4df5a97e"
-                                    target="_blank" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to my cv">
+                                <Link href={url ? url : ''}
+                                      target="_blank" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to my cv">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faFile} size="lg"/>
@@ -134,7 +155,8 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link href="/projects" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect tp project page a list with all my projects">
+                                <Link href="/projects" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect tp project page a list with all my projects">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faBriefcase}/>
@@ -146,7 +168,8 @@ export function Navbar() {
                                 </Link>
                             </ListItem>
                             <ListItem onClick={handleDrawerClose}>
-                                <Link href="/contact" style={{textDecoration: "none", color: "inherit"}} aria-label="Redirect to contactpage to contact me with a contact form">
+                                <Link href="/contact" style={{textDecoration: "none", color: "inherit"}}
+                                      aria-label="Redirect to contactpage to contact me with a contact form">
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <FontAwesomeIcon icon={faAddressCard} size="lg"/>
