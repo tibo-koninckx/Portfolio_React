@@ -2,7 +2,7 @@ import {Navbar} from "../components/Navbar";
 import "../App.css";
 import {MessageProvoider} from "../contexts/messageContext";
 
-export const metadata = {
+const metadata = {
     title: "Portfolio Tibo Koninckx",
     description: "Portfolio",
 }
