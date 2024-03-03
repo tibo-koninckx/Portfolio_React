@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
         <head>
             <link href="https://fonts.googleapis.com" rel="preconnect"/>
-            <link crossOrigin href="https://fonts.gstatic.com" rel="preconnect"/>
+            <link crossOrigin="true" href="https://fonts.gstatic.com" rel="preconnect"/>
             <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
             <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet"
                   type='text/css'/>
